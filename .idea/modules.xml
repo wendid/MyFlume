@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Color-scheme/Color-scheme.iml" filepath="$PROJECT_DIR$/Color-scheme/Color-scheme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Data-center/Data-center.iml" filepath="$PROJECT_DIR$/Data-center/Data-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Make-adornment/Make-adornment.iml" filepath="$PROJECT_DIR$/Make-adornment/Make-adornment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Make-layout/Make-layout.iml" filepath="$PROJECT_DIR$/Make-layout/Make-layout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Model-test/Model-test.iml" filepath="$PROJECT_DIR$/Model-test/Model-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Planning-case/Planning-case.iml" filepath="$PROJECT_DIR$/Planning-case/Planning-case.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Product-info/Product-info.iml" filepath="$PROJECT_DIR$/Product-info/Product-info.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Productshow.iml" filepath="$PROJECT_DIR$/Productshow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rabbitmq-deal/Rabbitmq-deal.iml" filepath="$PROJECT_DIR$/Rabbitmq-deal/Rabbitmq-deal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tailor-made/Tailor-made.iml" filepath="$PROJECT_DIR$/Tailor-made/Tailor-made.iml" />
+    </modules>
+  </component>
+</project>
