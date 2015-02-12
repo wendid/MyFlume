@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>tailor-made</artifactId>
 
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -221,6 +222,24 @@
             <artifactId>tomcat-dbcp</artifactId>
             <version>7.0.35</version>
         </dependency>
+
+        <!-- tbschedule -->
+        <dependency>
+            <groupId>com.taobao.pamirs.schedule</groupId>
+            <artifactId>tbschedule</artifactId>
+            <version>3.2.13</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-beanutils</groupId>
+                    <artifactId>commons-beanutils-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
 
     </dependencies>
 
