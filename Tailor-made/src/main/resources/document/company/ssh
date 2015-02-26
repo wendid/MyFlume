@@ -1,0 +1,88 @@
+ssh 项目
+https://github.com/love-somnus/Somnus   这个项目不错，有些分量
+
+ssh不能显示详细错误日志
+报错
+
+Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Unable to locate Spring NamespaceHandler for XML schema namespace [http://www.springframework.org/schema/tx]
+Offending resource: file [WEB-INF/classes/spring-hibernate.xml]
+
+感觉这个应该是没有配置好tomcat造成，so。。。
+http://blog.csdn.net/little__zm/article/details/19570535
+
+web.xml 详解
+http://flyingsnail.blog.51cto.com/5341669/1353728
+
+
+springMvc
+http://flyingsnail.blog.51cto.com/5341669/1353894
+对应于springMVC的搭建和配置可参考：
+
+《SpringMVC常用基础知识【转】》
+
+
+
+《跟开涛学SpringMVC》
+
+《基于注解的 Spring MVC 简单入门》
+
+《Spring MVC全部文档》
+
+
+
+《Spring MVC 教程,快速入门,深入分析》
+
+http://elf8848.iteye.com/blog/875830/
+
+
+
+对应于springSecurity的搭建及配置可参考：
+
+《spring-security3 配置和使用》
+
+《Spring Security3.1 最新配置实例》
+
+《Spring Security学习总结》
+
+《SpringSecurity3配置及原理简介》
+
+《springSecurity源码分析——DelegatingFilterProxy类的作用》
+
+
+
+spring相关
+
+http://sishuok.com/forum/blogPost/list/5160.html
+
+
+
+spring-mvc 
+
+https://github.com/shagstrom/spring-mvc-hibernate-skeleton
+
+另外一种配置方法
+
+https://github.com/chuangtc/SpringMVC4-Hibernate4-Example
+
+下面的项目里面包含了很多我不知道的元素
+
+https://github.com/oronno/WebApplication-Project-Skeleton
+
+下面的项目是mybatis
+
+https://coding.net/u/chenxiaobo/p/base-framework/git
+
+下面这个是springmvc  hibernate整合
+
+https://github.com/snooppy/usermanagement
+
+
+
+spring mvc的访问
+
+http://localhost:8080/user/manager
+
+user                      
+
+manager                 
