@@ -1,3 +1,4 @@
+第一版：
 知识点             sys_knowledge_point
 树形结构           sys_tree
 数组结构           sys_array
@@ -12,24 +13,27 @@
 业务库             sys_business_db
 
 
+第二版：
+业务库            sys_business_db
+节点              sys_node
+树形结构           sys_tree
+数组结构           sys_array
+图结构             sys_map
+栈形结构           sys_stack
+队列结构           sys_queue
+测试模型           sys_model
+设计师             sys_designer
+模型接口           sys_model_interface
+二维绑定算法        sys_binding_2
 
-知识点 N    N 树形结构    1知识点属于N树形结构     1树形结构包含N知识点
-知识点 N    N 数组结构
-知识点 N    N 图结构
-知识点 N    N 栈结构
-知识点 N    N 队列结构
-知识点 N    N 知识库
-知识点 N    N 知识点属性
-知识点 N    N 树形结构
 
-
-知识点 N    N 知识库
 
 
 
 ps.tailor.code  执行、生成 sql java hibernate代码
 ps.tailor.knowledge  知识的所有操作
 ps.tailor.structure  树形、图、栈、队列结构
+ps.tailor.user  知识收集者、设计师
 
 
 

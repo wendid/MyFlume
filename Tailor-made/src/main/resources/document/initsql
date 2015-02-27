@@ -1,0 +1,26 @@
+CREATE TABLE sys_business_db(
+	id INT NOT NULL AUTO_INCREMENT,
+	name_cn varchar(60) default '' ,
+	name_en varchar(60) default '' ,
+	type_id int,
+	remark varchar(100) default '' ,
+	c_time TIMESTAMP not NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+CREATE TABLE sys_type(
+	id INT NOT NULL AUTO_INCREMENT,
+	name_cn varchar(60) default '' ,
+	name_en varchar(60) default '' ,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+CREATE TABLE sys_node(
+	id INT NOT NULL AUTO_INCREMENT,
+	name_cn varchar(60) default '' ,
+	name_en varchar(60) default '' ,
+	type enum('tree','array','map','stack','queue','object') default 'object' ,
+	remark varchar(100) default '' ,
+	c_time TIMESTAMP not NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
