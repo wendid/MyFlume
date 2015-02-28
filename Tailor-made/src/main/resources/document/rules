@@ -1,0 +1,8 @@
+编码规则
+
+联表规则
+sys_node_ai_recommend_tree
+表名1_表名2
+
+表名1_id
+表名2_id

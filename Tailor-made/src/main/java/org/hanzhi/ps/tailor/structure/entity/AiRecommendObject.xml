@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+        <entity class="org.hanzhi.ps.tailor.structure.entity.AiRecommendObject">
+                <table name="ai_recommend_object" schema="" catalog="business_tailor_made"/>
+                <attributes>
+                        <id name="id">
+                                <column name="id"/>
+                        </id>
+                        <basic name="nameCn">
+                                <column name="name_cn"/>
+                        </basic>
+                        <basic name="nameEn">
+                                <column name="name_en"/>
+                        </basic>
+                        <basic name="parentId">
+                                <column name="parent_id"/>
+                        </basic>
+                        <basic name="aiRecommendProjectId">
+                                <column name="ai_recommend_project_id"/>
+                        </basic>
+                        <basic name="levelNum">
+                                <column name="level_num"/>
+                        </basic>
+                        <basic name="hasChildren">
+                                <column name="has_children"/>
+                        </basic>
+                        <basic name="cTime">
+                                <column name="c_time"/>
+                        </basic>
+                </attributes>
+        </entity>
+</entity-mappings>

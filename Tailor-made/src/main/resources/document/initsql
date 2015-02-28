@@ -24,3 +24,100 @@ CREATE TABLE sys_node(
 	c_time TIMESTAMP not NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY key(id)
 )ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+-- 接入已经开发好的tree
+
+CREATE TABLE sys_node_ai_recommend_tree(
+	id INT NOT NULL AUTO_INCREMENT,
+	sys_node_id int ,
+	ai_recommend_tree_id int ,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+CREATE TABLE ai_recommend_tree(
+	id INT NOT NULL AUTO_INCREMENT,
+	name_cn varchar(60) default '' ,
+	name_en varchar(60) default '' ,
+	ai_recommend_tree_id int,
+	level tinyint ,
+	has_children enum('has','not','never'),
+	c_time TIMESTAMP not NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+
+CREATE TABLE ai_recommend_object(
+	id INT NOT NULL AUTO_INCREMENT,
+	name_cn varchar(60) default '' ,
+	name_en varchar(60) default '' ,
+	parent_id int ,
+	ai_recommend_project_id int,
+	level_num tinyint ,
+	has_children enum('has','not','never'),
+	c_time TIMESTAMP not NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+
+CREATE TABLE ai_recommend_object1_object2(
+	id INT NOT NULL AUTO_INCREMENT,
+	ai_recommend_object_id1 int ,
+	ai_recommend_object_id2 int ,
+	ai_recommend_rule_id int,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+
+CREATE TABLE ai_recommend_rule(
+	id INT NOT NULL AUTO_INCREMENT,
+	input enum('text','radio','checkbox','select'),
+	type enum('int','string','class','boolean'),
+	sort enum('asc','desc','not'),
+	sort_limit tinyint ,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+
+CREATE TABLE ai_recommend_interface(
+	id INT NOT NULL AUTO_INCREMENT,
+	info varchar(500) ,
+	ai_recommend_rule_id int not null,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+
+
+CREATE TABLE ai_recommend_rule_input(
+	id INT NOT NULL AUTO_INCREMENT,
+	input enum('text','radio','checkbox','select'),
+	input_info varchar(100),
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+insert into ai_recommend_rule_input(input,input_info) values('text','文本');
+insert into ai_recommend_rule_input(input,input_info) values('radio','单选');
+insert into ai_recommend_rule_input(input,input_info) values('checkbox','多选');
+insert into ai_recommend_rule_input(input,input_info) values('select','下拉');
+
+CREATE TABLE ai_recommend_rule_type(
+	id INT NOT NULL AUTO_INCREMENT,
+	type enum('int','string','class','boolean'),
+	type_info varchar(100),
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+insert into ai_recommend_rule_type(type,type_info) values('int','整数');
+insert into ai_recommend_rule_type(type,type_info) values('string','字符型');
+insert into ai_recommend_rule_type(type,type_info) values('class','类');
+insert into ai_recommend_rule_type(type,type_info) values('boolean','真或假');
+
+CREATE TABLE ai_recommend_rule_sort(
+	id INT NOT NULL AUTO_INCREMENT,
+	sort enum('asc','desc','not','random'),
+	sort_info varchar(100),
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+insert into ai_recommend_rule_sort(sort,sort_info) values('asc','正序');
+insert into ai_recommend_rule_sort(sort,sort_info) values('desc','倒序');
+insert into ai_recommend_rule_sort(sort,sort_info) values('not','不用排序');
+insert into ai_recommend_rule_sort(sort,sort_info) values('random','随机显示');
+
+

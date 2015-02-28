@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+        <entity class="org.hanzhi.ps.tailor.structure.entity.SysType">
+                <table name="sys_type" schema="" catalog="business_tailor_made"/>
+                <attributes>
+                        <id name="id">
+                                <column name="id"/>
+                        </id>
+                        <basic name="nameCn">
+                                <column name="name_cn"/>
+                        </basic>
+                        <basic name="nameEn">
+                                <column name="name_en"/>
+                        </basic>
+                </attributes>
+        </entity>
+</entity-mappings>

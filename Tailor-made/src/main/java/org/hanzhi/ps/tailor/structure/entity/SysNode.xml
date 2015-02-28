@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+        <entity class="org.hanzhi.ps.tailor.structure.entity.SysNode">
+                <table name="sys_node" schema="" catalog="business_tailor_made"/>
+                <attributes>
+                        <id name="id">
+                                <column name="id"/>
+                        </id>
+                        <basic name="nameCn">
+                                <column name="name_cn"/>
+                        </basic>
+                        <basic name="nameEn">
+                                <column name="name_en"/>
+                        </basic>
+                        <basic name="type">
+                                <column name="type"/>
+                        </basic>
+                        <basic name="remark">
+                                <column name="remark"/>
+                        </basic>
+                        <basic name="cTime">
+                                <column name="c_time"/>
+                        </basic>
+                </attributes>
+        </entity>
+</entity-mappings>
