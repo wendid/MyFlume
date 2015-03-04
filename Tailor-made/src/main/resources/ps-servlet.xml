@@ -17,7 +17,7 @@
         ">
         
     <!-- 启动自动扫描 该包下所有的Bean(@Controller) -->
-    <context:component-scan base-package="com.lei.demo.controller" />
+    <context:component-scan base-package="org.hanzhi.ps.tailor.structure.controller" />
     
     <!-- 基于注释的事务，当注释中发现@Transactional时，使用id为“transactionManager”的事务管理器  -->
     <!-- 如果没有设置transaction-manager的值，则spring以缺省默认的事务管理器来处理事务，默认事务管理器为第一个加载的事务管理器 -->
@@ -26,7 +26,7 @@
 	<!-- 定义视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
-			<value>/WEB-INF/user/</value>
+			<value>/WEB-INF/</value>
 		</property>
 		<property name="suffix">
 			<value>.jsp</value>
