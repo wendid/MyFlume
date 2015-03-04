@@ -13,7 +13,7 @@ public class AiRecommendInterface {
     private int aiRecommendRuleId;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -23,7 +23,7 @@ public class AiRecommendInterface {
     }
 
     @Basic
-    @Column(name = "info")
+    @Column(name = "info", nullable = true, insertable = true, updatable = true, length = 500)
     public String getInfo() {
         return info;
     }
@@ -33,7 +33,7 @@ public class AiRecommendInterface {
     }
 
     @Basic
-    @Column(name = "ai_recommend_rule_id")
+    @Column(name = "ai_recommend_rule_id", nullable = false, insertable = true, updatable = true)
     public int getAiRecommendRuleId() {
         return aiRecommendRuleId;
     }

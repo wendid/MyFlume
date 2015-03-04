@@ -18,7 +18,7 @@ public class AiRecommendTree {
     private Timestamp cTime;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -28,7 +28,7 @@ public class AiRecommendTree {
     }
 
     @Basic
-    @Column(name = "name_cn")
+    @Column(name = "name_cn", nullable = true, insertable = true, updatable = true, length = 60)
     public String getNameCn() {
         return nameCn;
     }
@@ -38,7 +38,7 @@ public class AiRecommendTree {
     }
 
     @Basic
-    @Column(name = "name_en")
+    @Column(name = "name_en", nullable = true, insertable = true, updatable = true, length = 60)
     public String getNameEn() {
         return nameEn;
     }
@@ -48,7 +48,7 @@ public class AiRecommendTree {
     }
 
     @Basic
-    @Column(name = "ai_recommend_tree_id")
+    @Column(name = "ai_recommend_tree_id", nullable = true, insertable = true, updatable = true)
     public Integer getAiRecommendTreeId() {
         return aiRecommendTreeId;
     }
@@ -58,7 +58,7 @@ public class AiRecommendTree {
     }
 
     @Basic
-    @Column(name = "level")
+    @Column(name = "level", nullable = true, insertable = true, updatable = true)
     public Byte getLevel() {
         return level;
     }
@@ -68,7 +68,7 @@ public class AiRecommendTree {
     }
 
     @Basic
-    @Column(name = "has_children")
+    @Column(name = "has_children", nullable = true, insertable = true, updatable = true, length = 5)
     public String getHasChildren() {
         return hasChildren;
     }
@@ -78,7 +78,7 @@ public class AiRecommendTree {
     }
 
     @Basic
-    @Column(name = "c_time")
+    @Column(name = "c_time", nullable = false, insertable = true, updatable = true)
     public Timestamp getcTime() {
         return cTime;
     }

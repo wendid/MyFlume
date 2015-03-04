@@ -19,7 +19,7 @@ public class AiRecommendObject {
     private Timestamp cTime;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -29,7 +29,7 @@ public class AiRecommendObject {
     }
 
     @Basic
-    @Column(name = "name_cn")
+    @Column(name = "name_cn", nullable = true, insertable = true, updatable = true, length = 60)
     public String getNameCn() {
         return nameCn;
     }
@@ -39,7 +39,7 @@ public class AiRecommendObject {
     }
 
     @Basic
-    @Column(name = "name_en")
+    @Column(name = "name_en", nullable = true, insertable = true, updatable = true, length = 60)
     public String getNameEn() {
         return nameEn;
     }
@@ -49,7 +49,7 @@ public class AiRecommendObject {
     }
 
     @Basic
-    @Column(name = "parent_id")
+    @Column(name = "parent_id", nullable = true, insertable = true, updatable = true)
     public Integer getParentId() {
         return parentId;
     }
@@ -59,7 +59,7 @@ public class AiRecommendObject {
     }
 
     @Basic
-    @Column(name = "ai_recommend_project_id")
+    @Column(name = "ai_recommend_project_id", nullable = true, insertable = true, updatable = true)
     public Integer getAiRecommendProjectId() {
         return aiRecommendProjectId;
     }
@@ -69,7 +69,7 @@ public class AiRecommendObject {
     }
 
     @Basic
-    @Column(name = "level_num")
+    @Column(name = "level_num", nullable = true, insertable = true, updatable = true)
     public Byte getLevelNum() {
         return levelNum;
     }
@@ -79,7 +79,7 @@ public class AiRecommendObject {
     }
 
     @Basic
-    @Column(name = "has_children")
+    @Column(name = "has_children", nullable = true, insertable = true, updatable = true, length = 5)
     public String getHasChildren() {
         return hasChildren;
     }
@@ -89,7 +89,7 @@ public class AiRecommendObject {
     }
 
     @Basic
-    @Column(name = "c_time")
+    @Column(name = "c_time", nullable = false, insertable = true, updatable = true)
     public Timestamp getcTime() {
         return cTime;
     }

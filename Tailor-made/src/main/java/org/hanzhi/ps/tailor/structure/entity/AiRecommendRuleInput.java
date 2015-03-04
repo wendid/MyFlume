@@ -13,7 +13,7 @@ public class AiRecommendRuleInput {
     private String inputInfo;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -23,7 +23,7 @@ public class AiRecommendRuleInput {
     }
 
     @Basic
-    @Column(name = "input")
+    @Column(name = "input", nullable = true, insertable = true, updatable = true, length = 8)
     public String getInput() {
         return input;
     }
@@ -33,7 +33,7 @@ public class AiRecommendRuleInput {
     }
 
     @Basic
-    @Column(name = "input_info")
+    @Column(name = "input_info", nullable = true, insertable = true, updatable = true, length = 100)
     public String getInputInfo() {
         return inputInfo;
     }

@@ -13,7 +13,7 @@ public class SysType {
     private String nameEn;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -23,7 +23,7 @@ public class SysType {
     }
 
     @Basic
-    @Column(name = "name_cn")
+    @Column(name = "name_cn", nullable = true, insertable = true, updatable = true, length = 60)
     public String getNameCn() {
         return nameCn;
     }
@@ -33,7 +33,7 @@ public class SysType {
     }
 
     @Basic
-    @Column(name = "name_en")
+    @Column(name = "name_en", nullable = true, insertable = true, updatable = true, length = 60)
     public String getNameEn() {
         return nameEn;
     }

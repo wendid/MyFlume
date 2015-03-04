@@ -13,7 +13,7 @@ public class AiRecommendRuleSort {
     private String sortInfo;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -23,7 +23,7 @@ public class AiRecommendRuleSort {
     }
 
     @Basic
-    @Column(name = "sort")
+    @Column(name = "sort", nullable = true, insertable = true, updatable = true, length = 6)
     public String getSort() {
         return sort;
     }
@@ -33,7 +33,7 @@ public class AiRecommendRuleSort {
     }
 
     @Basic
-    @Column(name = "sort_info")
+    @Column(name = "sort_info", nullable = true, insertable = true, updatable = true, length = 100)
     public String getSortInfo() {
         return sortInfo;
     }

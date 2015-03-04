@@ -13,7 +13,7 @@ public class AiRecommendRuleType {
     private String typeInfo;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -23,7 +23,7 @@ public class AiRecommendRuleType {
     }
 
     @Basic
-    @Column(name = "type")
+    @Column(name = "type", nullable = true, insertable = true, updatable = true, length = 7)
     public String getType() {
         return type;
     }
@@ -33,7 +33,7 @@ public class AiRecommendRuleType {
     }
 
     @Basic
-    @Column(name = "type_info")
+    @Column(name = "type_info", nullable = true, insertable = true, updatable = true, length = 100)
     public String getTypeInfo() {
         return typeInfo;
     }

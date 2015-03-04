@@ -15,7 +15,7 @@ public class AiRecommendRule {
     private Byte sortLimit;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -25,7 +25,7 @@ public class AiRecommendRule {
     }
 
     @Basic
-    @Column(name = "input")
+    @Column(name = "input", nullable = true, insertable = true, updatable = true, length = 8)
     public String getInput() {
         return input;
     }
@@ -35,7 +35,7 @@ public class AiRecommendRule {
     }
 
     @Basic
-    @Column(name = "type")
+    @Column(name = "type", nullable = true, insertable = true, updatable = true, length = 7)
     public String getType() {
         return type;
     }
@@ -45,7 +45,7 @@ public class AiRecommendRule {
     }
 
     @Basic
-    @Column(name = "sort")
+    @Column(name = "sort", nullable = true, insertable = true, updatable = true, length = 4)
     public String getSort() {
         return sort;
     }
@@ -55,7 +55,7 @@ public class AiRecommendRule {
     }
 
     @Basic
-    @Column(name = "sort_limit")
+    @Column(name = "sort_limit", nullable = true, insertable = true, updatable = true)
     public Byte getSortLimit() {
         return sortLimit;
     }

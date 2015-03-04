@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
-    <persistence-unit name="NewPersistenceUnit"/>
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/AiRecommendInterface.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/AiRecommendObject.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/AiRecommendObject1Object2.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/AiRecommendRule.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/AiRecommendRuleInput.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/AiRecommendRuleSort.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/AiRecommendRuleType.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/AiRecommendTree.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/SysBusinessDb.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/SysNode.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/SysNodeAiRecommendTree.xml</mapping-file>
+        <mapping-file>org/hanzhi/ps/tailor/structure/entity/SysType.xml</mapping-file>
+        <class>org.hanzhi.ps.tailor.structure.entity.AiRecommendInterface</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.AiRecommendObject</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.AiRecommendObject1Object2</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.AiRecommendRule</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.AiRecommendRuleInput</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.AiRecommendRuleSort</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.AiRecommendRuleType</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.AiRecommendTree</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.SysBusinessDb</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.SysNode</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.SysNodeAiRecommendTree</class>
+        <class>org.hanzhi.ps.tailor.structure.entity.SysType</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/business_tailor_made"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username"/>
+            <property name="hibernate.connection.password"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
 </persistence>

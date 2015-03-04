@@ -17,7 +17,7 @@ public class SysNode {
     private Timestamp cTime;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public int getId() {
         return id;
     }
@@ -27,7 +27,7 @@ public class SysNode {
     }
 
     @Basic
-    @Column(name = "name_cn")
+    @Column(name = "name_cn", nullable = true, insertable = true, updatable = true, length = 60)
     public String getNameCn() {
         return nameCn;
     }
@@ -37,7 +37,7 @@ public class SysNode {
     }
 
     @Basic
-    @Column(name = "name_en")
+    @Column(name = "name_en", nullable = true, insertable = true, updatable = true, length = 60)
     public String getNameEn() {
         return nameEn;
     }
@@ -47,7 +47,7 @@ public class SysNode {
     }
 
     @Basic
-    @Column(name = "type")
+    @Column(name = "type", nullable = true, insertable = true, updatable = true, length = 6)
     public String getType() {
         return type;
     }
@@ -57,7 +57,7 @@ public class SysNode {
     }
 
     @Basic
-    @Column(name = "remark")
+    @Column(name = "remark", nullable = true, insertable = true, updatable = true, length = 100)
     public String getRemark() {
         return remark;
     }
@@ -67,7 +67,7 @@ public class SysNode {
     }
 
     @Basic
-    @Column(name = "c_time")
+    @Column(name = "c_time", nullable = false, insertable = true, updatable = true)
     public Timestamp getcTime() {
         return cTime;
     }
