@@ -27,12 +27,18 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 	 * @return org.hibernate.Session
 	 */
 	public Session getCurrentSession() {
+//		return sessionFactory.openSession();
 		return sessionFactory.getCurrentSession();
 	}
 
 	public Serializable save(T o) {
 		if (o != null) {
+			Session s = getCurrentSession();
+			try {
 			return getCurrentSession().save(o);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		return null;
 	}

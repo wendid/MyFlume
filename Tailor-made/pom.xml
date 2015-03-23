@@ -12,6 +12,7 @@
     <packaging>war</packaging>
     <properties>
         <org.springframework-version>4.1.0.RELEASE</org.springframework-version>
+        <!--<org.springframework-version>3.2.5.RELEASE</org.springframework-version>-->
     </properties>
 
     <dependencies>
@@ -344,6 +345,7 @@
                         <scanIntervalSeconds>1</scanIntervalSeconds>
                         <stopKey>foo</stopKey>
                         <stopPort>9999</stopPort>
+                        <contextXml>${project.basedir}/src/main/resources/jetty-context.xml</contextXml>
                         <webAppConfig implementation="org.mortbay.jetty.plugin.JettyWebAppContext">
                             <!-- 一般是项目名称 -->
                             <!--<contextPath>/deal</contextPath>-->
