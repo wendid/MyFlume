@@ -1,46 +1,18 @@
 package org.hanzhi.ps.tailor.structure.service;
 
 import java.util.List;
-import com.somnus.model.base.Syorganization;
-import com.somnus.service.BaseServiceI;
-import com.somnus.util.base.HqlFilter;
+
+import org.hanzhi.ps.tailor.structure.entity.SysBusinessDb;
+import org.hanzhi.ps.tailor.util.HqlFilter;
 
 /**
  * 机构业务
  * 
- * @author Somnus
+ * @author hanzhi
  * 
  */
-public interface SyorganizationServiceI extends BaseServiceI<Syorganization> {
+public interface BusinessDBServiceI extends BaseServiceI<SysBusinessDb> {
 
-	/**
-	 * 更新机构
-	 */
-	public void updateOrganization(Syorganization syorganization);
 
-	/**
-	 * 机构授权
-	 * 
-	 * @param id
-	 *            机构ID
-	 * @param resourceIds
-	 *            资源IDS
-	 */
-	public void grant(String id, String resourceIds);
-
-	/**
-	 * 查找机构
-	 */
-	public List<Syorganization> findOrganizationByFilter(HqlFilter hqlFilter);
-
-	/**
-	 * 保存机构
-	 * 
-	 * @param data
-	 *            机构信息
-	 * @param id
-	 *            用户ID
-	 */
-	public void saveOrganization(Syorganization syorganization, String userId);
 
 }

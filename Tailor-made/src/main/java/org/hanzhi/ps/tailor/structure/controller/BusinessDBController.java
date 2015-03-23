@@ -1,38 +1,62 @@
 package org.hanzhi.ps.tailor.structure.controller;
 
-import org.hanzhi.ps.tailor.structure.service.UserService;
+import org.hanzhi.ps.tailor.structure.entity.SysBusinessDb;
+import org.hanzhi.ps.tailor.structure.service.BaseServiceI;
+import org.hanzhi.ps.tailor.structure.service.BusinessDBServiceI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.Serializable;
+import java.util.List;
 
 @Controller
-@RequestMapping("/user")
-public class BusinessDBController {
+@RequestMapping("/businessdb")
+public class BusinessDBController extends BaseController<SysBusinessDb> {
 
-    @Resource(name = "userService")
-    private UserService service;
+    private final static Logger logger = LoggerFactory.getLogger(BusinessDBController.class);
 
-    @RequestMapping(value = "/manager", method = RequestMethod.GET)
-    public ModelAndView hello2() {
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("message", "HelloMVC");
-        mv.setViewName("user/users");
-        return mv;
+    @Autowired
+    private BaseServiceI<SysBusinessDb> businessDBService;
+
+
+    //展示所有业务库页面，并且可以进行管理，crud
+//    @RequestMapping(value = "/showdb", method = RequestMethod.GET)
+
+//    public @ResponseBody String showDB(@PathVariable String foo) {   //这种方式也可以，但只可以String
+//    @RequestMapping(value = "/showdb/{id}", method = RequestMethod.GET)
+//    public @ResponseBody Long showDB(@PathVariable("id") Long id) {
+    @RequestMapping(value = "/showdb", method = RequestMethod.GET)
+    public @ResponseBody List<SysBusinessDb> showDB(@RequestParam(value="foo") int foo) {
+        List<SysBusinessDb> list = businessDBService.find(0,10);
+//        ModelAndView mv = new ModelAndView();
+//        mv.addObject("message", foo);
+//        mv.setViewName("user/users");
+        return list;
     }
 
+    //增加业务库
+    @RequestMapping(value = "/adddb", method = RequestMethod.GET)
+    public @ResponseBody List<SysBusinessDb> addDB() {
+        SysBusinessDb sb = new SysBusinessDb();
+        sb.setNameCn("haha");
+        Serializable s = businessDBService.save(sb);
 
+        List<SysBusinessDb> list = businessDBService.find(0,10);
+        return list;
+    }
+
+    //点击单个业务库展开，并显示其下的节点
     @RequestMapping(value = "/count", method = RequestMethod.GET)
-    public ModelAndView count() {
+    public String findNodesById() {
 
-        int c = service.userCount();
-
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("message", c);
-        mv.setViewName("user/users");
-        return mv;
+        return "user/main";
     }
 }
 

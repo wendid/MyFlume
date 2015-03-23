@@ -32,7 +32,7 @@
 
 ps.tailor.code  执行、生成 sql java hibernate代码
 ps.tailor.knowledge  知识的所有操作
-ps.tailor.structure  树形、图、栈、队列结构
+ps.tailor.structure  业务库、树形、图、栈、队列结构
 ps.tailor.user  知识收集者、设计师
 
 

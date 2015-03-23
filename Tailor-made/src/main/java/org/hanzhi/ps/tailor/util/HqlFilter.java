@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -13,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 
-import com.alibaba.fastjson.JSON;
 
 /**
  * HQL过滤器，用于添加where条件和排序，过滤结果集
@@ -32,7 +30,7 @@ import com.alibaba.fastjson.JSON;
  * 
  * // EQ 相等 // NE 不等 // LT 小于 // GT 大于 // LE 小于等于 // GE 大于等于 // LK 模糊 // RLK 右模糊 // LLK 左模糊
  * 
- * @author Somnus
+ * @author hanzhi
  * 
  */
 public class HqlFilter {
@@ -180,7 +178,7 @@ public class HqlFilter {
 	 * 
 	 * 举例，value传递：0
 	 * 
-	 * @param params
+	 * @param
 	 */
 	public void addFilter(String name, String value) {
 		if (name != null && value != null) {

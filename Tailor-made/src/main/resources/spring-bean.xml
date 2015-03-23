@@ -8,12 +8,13 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-	  
-	<bean id="usersDAO" class="com.lei.demo.dao.UsersDAO">
-		  <property name="sessionFactory" ref="sessionFactory"></property>
-	</bean>
-	<bean id="userService" class="com.lei.demo.service.UserService">
-		<property name="userDao" ref="usersDAO"></property>
-	</bean>
+
+
+	<!--<bean id="usersDAO" class="org.hanzhi.ps.tailor.structure.dao.UsersDAO">-->
+		<!--<property name="sessionFactory" ref="sessionFactory"></property>-->
+	<!--</bean>-->
+	<!--<bean id="userService" class="org.hanzhi.ps.tailor.structure.service.UserService">-->
+		<!--<property name="userDao" ref="usersDAO"></property>-->
+	<!--</bean>-->
         
 </beans>

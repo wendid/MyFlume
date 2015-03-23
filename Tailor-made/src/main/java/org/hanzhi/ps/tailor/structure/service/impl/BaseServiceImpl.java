@@ -5,16 +5,18 @@ import java.lang.reflect.ParameterizedType;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
+
+import org.hanzhi.ps.tailor.structure.dao.BaseDaoI;
+import org.hanzhi.ps.tailor.structure.service.BaseServiceI;
+import org.hanzhi.ps.tailor.util.HqlFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.somnus.dao.base.BaseDaoI;
-import com.somnus.service.BaseServiceI;
-import com.somnus.util.base.HqlFilter;
+
 
 /**
  * 基础业务逻辑
  * 
- * @author Somnus
+ * @author hanzhi
  * 
  * @param <T>
  */

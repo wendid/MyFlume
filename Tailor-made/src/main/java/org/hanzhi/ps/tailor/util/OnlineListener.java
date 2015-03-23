@@ -19,15 +19,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-import com.somnus.model.base.SessionInfo;
-import com.somnus.model.base.Syonline;
-import com.somnus.service.base.SyonlineServiceI;
+//import com.somnus.model.base.SessionInfo;
+//import com.somnus.model.base.Syonline;
+//import com.somnus.service.base.SyonlineServiceI;
 
 /**
  * 监听在线用户上线下线
  * 
  * @author Somnus
- * 
+ *
+ * 这个类需要日后修改下
  */
 public class OnlineListener implements ServletContextListener, ServletContextAttributeListener, HttpSessionListener, HttpSessionAttributeListener, HttpSessionActivationListener, HttpSessionBindingListener, ServletRequestListener, ServletRequestAttributeListener {
 
@@ -47,19 +48,19 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 	public void attributeAdded(HttpSessionBindingEvent evt) {
 		String name = evt.getName();
 		logger.debug("向session存入属性：" + name);
-		if (ConfigUtil.getSessionInfoName().equals(name)) {// 如果存入的属性是sessionInfo的话
-			HttpSession session = evt.getSession();
-			SessionInfo sessionInfo = (SessionInfo) session.getAttribute(name);
-			if (sessionInfo != null) {
-				// System.out.println(sessionInfo.getUser().getName() + "登录了");
-				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("syonlineServiceImpl");
-				Syonline online = new Syonline();
-				online.setType("1");// 登录
-				online.setLoginname(sessionInfo.getUser().getLoginname());
-				online.setIp(sessionInfo.getUser().getIp());
-				syonlineService.save(online);
-			}
-		}
+//		if (ConfigUtil.getSessionInfoName().equals(name)) {// 如果存入的属性是sessionInfo的话
+//			HttpSession session = evt.getSession();
+//			SessionInfo sessionInfo = (SessionInfo) session.getAttribute(name);
+//			if (sessionInfo != null) {
+//				// System.out.println(sessionInfo.getUser().getName() + "登录了");
+//				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("syonlineServiceImpl");
+//				Syonline online = new Syonline();
+//				online.setType("1");// 登录
+//				online.setLoginname(sessionInfo.getUser().getLoginname());
+//				online.setIp(sessionInfo.getUser().getIp());
+//				syonlineService.save(online);
+//			}
+//		}
 	}
 
 	/**
@@ -89,16 +90,16 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 		HttpSession session = evt.getSession();
 		if (session != null) {
 			logger.debug("session销毁：" + session.getId());
-			SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
-			if (sessionInfo != null) {
-				// System.out.println(sessionInfo.getUser().getName() + "注销了");
-				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("syonlineServiceImpl");
-				Syonline online = new Syonline();
-				online.setType("0");// 注销
-				online.setLoginname(sessionInfo.getUser().getLoginname());
-				online.setIp(sessionInfo.getUser().getIp());
-				syonlineService.save(online);
-			}
+//			SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
+//			if (sessionInfo != null) {
+//				// System.out.println(sessionInfo.getUser().getName() + "注销了");
+//				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("syonlineServiceImpl");
+//				Syonline online = new Syonline();
+//				online.setType("0");// 注销
+//				online.setLoginname(sessionInfo.getUser().getLoginname());
+//				online.setIp(sessionInfo.getUser().getIp());
+//				syonlineService.save(online);
+//			}
 		}
 	}
 

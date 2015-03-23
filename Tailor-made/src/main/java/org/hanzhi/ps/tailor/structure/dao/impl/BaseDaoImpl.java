@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
+
+import org.hanzhi.ps.tailor.structure.dao.BaseDaoI;
 import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
@@ -11,7 +13,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.transform.Transformers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.somnus.dao.base.BaseDaoI;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class BaseDaoImpl<T> implements BaseDaoI<T> {

@@ -1,15 +1,16 @@
 package org.hanzhi.ps.tailor.structure.service;
 
+import org.hanzhi.ps.tailor.util.HqlFilter;
+
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
-import com.somnus.util.base.HqlFilter;
 
 /**
  * 基础业务逻辑类，其他service继承此service获得基本的业务
  * 
- * @author Somnus
+ * @author hanzhi
  * 
  * @param <T>
  */
@@ -51,7 +52,7 @@ public interface BaseServiceI<T> {
 	/**
 	 * 通过主键获得对象
 	 * 
-	 * @param c
+	 * //@param c
 	 *            类名.class
 	 * @param id
 	 *            主键

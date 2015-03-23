@@ -85,4 +85,42 @@ http://localhost:8080/user/manager
 
 user                      
 
-manager                 
+manager             
+
+
+
+scala spring
+
+https://github.com/sawano/scala-spring-mvc
+
+
+
+spring mvc原理图
+
+http://blog.csdn.net/xtu_xiaoxin/article/details/8796499
+
+
+
+<context:component-scan/> 扫描指定的包中的类上的注解，常用的注解有：
+@Controller 声明Action组件
+@Service    声明Service组件    @Service("myMovieLister") 
+@Repository 声明Dao组件
+@Component   泛指组件, 当不好归类时. 
+@RequestMapping("/menu")  请求映射
+@Resource  用于注入，( j2ee提供的 ) 默认按名称装配，@Resource(name="beanName") 
+@Autowired 用于注入，(srping提供的) 默认按类型装配 
+@Transactional( rollbackFor={Exception.class}) 事务管理
+@ResponseBody
+@Scope("prototype")   设定bean的作用域
+
+
+
+spring mvc 事例很好
+
+https://github.com/spring-projects/spring-mvc-showcase
+
+spring mvc
+
+http://www.cnblogs.com/fangjian0423/p/springmvc-request-param-analysis.html
+
+http://www.cnblogs.com/fangjian0423/category/589251.html

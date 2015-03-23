@@ -22,7 +22,8 @@ import org.apache.commons.fileupload.util.Streams;
 import org.apache.commons.io.FilenameUtils;
 
 import com.alibaba.fastjson.JSON;
-import com.somnus.model.easyui.Upload;
+import org.hanzhi.ps.tailor.structure.model.easyui.Upload;
+
 /** 
  *  
  * @author Administrator 

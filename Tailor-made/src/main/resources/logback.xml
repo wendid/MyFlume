@@ -12,9 +12,9 @@
 	</appender>
 	
 	<appender name="root" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.base}/somnus-root.log</file>
+        <file>${log.base}/ps-root.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/somnus-root-%i.%d{yyyy-MM-dd}.log.gz
+            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/ps-root-%i.%d{yyyy-MM-dd}.log.gz
             </fileNamePattern>
             <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <MaxFileSize>30MB</MaxFileSize>
@@ -27,9 +27,9 @@
     
 	<!-- 异常 -->
     <appender name="exception" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.base}/somnus-exception.log</file>
+        <file>${log.base}/ps-exception.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/somnus-exception-%i.%d{yyyy-MM-dd}.log.gz
+            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/ps-exception-%i.%d{yyyy-MM-dd}.log.gz
             </fileNamePattern>
             <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <MaxFileSize>30MB</MaxFileSize>
@@ -40,10 +40,10 @@
         </encoder>
     </appender>
     
-    <appender name="somnus-service" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.base}/somnus-service.log</file>
+    <appender name="ps-service" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.base}/ps-service.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/somnus-service-%i.%d{yyyy-MM-dd}.log.gz
+            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/ps-service-%i.%d{yyyy-MM-dd}.log.gz
             </fileNamePattern>
             <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <MaxFileSize>30MB</MaxFileSize>
@@ -54,9 +54,9 @@
         </encoder>
     </appender>
     
-    <logger name="com.somnus.service" additivity="false">
+    <logger name="org.hanzhi.ps.tailor.structure.service" additivity="false">
         <level value="info" />
-        <appender-ref ref="somnus-service" />
+        <appender-ref ref="ps-service" />
     </logger>
 	
 	<!-- show parameters for hibernate sql 专为 Hibernate 定制 -->  

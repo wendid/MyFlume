@@ -67,7 +67,7 @@ public class SysBusinessDb {
     }
 
     @Basic
-    @Column(name = "c_time", nullable = false, insertable = true, updatable = true)
+    @Column(name = "c_time", nullable = true, insertable = true, updatable = true)
     public Timestamp getcTime() {
         return cTime;
     }
