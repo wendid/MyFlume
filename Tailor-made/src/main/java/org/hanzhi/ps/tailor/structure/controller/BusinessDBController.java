@@ -27,7 +27,7 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
 
 
     @Autowired
-    private BaseServiceI<T> businessDBService;
+    private BaseServiceI<SysBusinessDb> businessDBService;
 //    protected BaseServiceI<T> businessDBService;// 业务逻辑
 
 

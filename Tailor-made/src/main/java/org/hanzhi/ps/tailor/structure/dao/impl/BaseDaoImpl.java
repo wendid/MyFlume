@@ -35,7 +35,10 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		if (o != null) {
 			Session s = getCurrentSession();
 			try {
-			return getCurrentSession().save(o);
+//			return getCurrentSession().save(o);
+			s.save(o);
+//			s.flush();
+			return null;
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
