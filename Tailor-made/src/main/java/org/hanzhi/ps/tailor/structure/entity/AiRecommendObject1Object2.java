@@ -15,6 +15,7 @@ public class AiRecommendObject1Object2 {
 
     @Id
     @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     public int getId() {
         return id;
     }

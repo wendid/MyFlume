@@ -21,6 +21,7 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	private Session session = null;
 	/**
 	 * 获得当前事物的session
 	 * 
@@ -33,17 +34,32 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 
 	public Serializable save(T o) {
 		if (o != null) {
-			Session s = getCurrentSession();
+			this.session = getCurrentSession();
 			try {
 //			return getCurrentSession().save(o);
-			s.save(o);
-//			s.flush();
-			return null;
+			session.save(o);
+//			session.flush();
+			flush();
 			} catch (Exception e) {
 				e.printStackTrace();
+			}finally {
+				session.clear();
+				session.close();
+				return  null;
 			}
 		}
 		return null;
+	}
+
+	private void dispose()
+	{
+		this.session.clear();
+		this.session.close();
+	}
+
+	private void flush()
+	{
+		this.session.flush();
 	}
 
 	public T getById(Class<T> c, Serializable id) {
@@ -75,19 +91,49 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 
 	public void delete(T o) {
 		if (o != null) {
-			getCurrentSession().delete(o);
+//			getCurrentSession().delete(o);
+			try {
+//			return getCurrentSession().save(o);
+			this.session.delete(o);
+//			session.flush();
+				flush();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				dispose();
+			}
 		}
 	}
 
 	public void update(T o) {
 		if (o != null) {
-			getCurrentSession().update(o);
+//			getCurrentSession().update(o);
+			try {
+//			return getCurrentSession().save(o);
+				this.session.update(o);
+//			session.flush();
+				flush();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				dispose();
+			}
 		}
 	}
 
 	public void saveOrUpdate(T o) {
 		if (o != null) {
-			getCurrentSession().saveOrUpdate(o);
+//			getCurrentSession().saveOrUpdate(o);
+			try {
+//			return getCurrentSession().save(o);
+				this.session.saveOrUpdate(o);
+//			session.flush();
+				flush();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				dispose();
+			}
 		}
 	}
 

@@ -1,0 +1,1 @@
+var main_url = "http://localhost/AI_Recommend/index.php/";

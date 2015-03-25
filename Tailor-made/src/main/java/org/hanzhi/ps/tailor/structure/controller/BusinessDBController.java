@@ -66,7 +66,7 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     public String findNodesById() {
 
-        return "user/main";
+        return "str/main";
     }
 }
 

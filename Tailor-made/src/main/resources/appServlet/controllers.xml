@@ -12,8 +12,6 @@
 	
 	<context:component-scan base-package="org.hanzhi.ps.tailor" />
 
-
-
 	<bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
 		<property name="prefix" value="/WEB-INF/"/>
 		<property name="suffix" value=".html"/>
@@ -24,12 +22,14 @@
 	<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
 		<property name="templateResolver" ref="templateResolver"/>
 	</bean>
+
 	<bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
 		<!--<property name="viewClass"-->
 				  <!--value="org.thymeleaf.extras.tiles2.spring4.web.view.ThymeleafTilesView" />-->
 		<property name="templateEngine" ref="templateEngine"/>
+		<property name="characterEncoding" value="UTF-8"/>
 		<property name="order" value="1"/>
-		<property name="viewNames" value="user/*,structure/*" />
+		<property name="viewNames" value="user/*,str/*" />
 	</bean>
 
 </beans>

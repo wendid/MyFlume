@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      class="csstransforms csstransforms3d csstransitions">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="twitter flight example"/>
+    <meta name="author" content=""/>
+    <title>Twitter Flight Example</title>
+    <link rel="stylesheet" type="text/css" href="../resources/easyui_js/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/easyui_js/themes/icon.css" />
+    <script type="text/javascript" src="../resources/easyui_js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/easyui_js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../resources/js/var.js"></script>
+</head>
+<body>
+<div class="easyui-panel" style="padding:5px">
+    <!-- 盛放树形结构的 -->
+    <ul id="project_html" class="easyui-tree" data-options="url:'',method:'get',state:'closed'"></ul>
+
+</div>
+<a id="project_add" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'">增加项目</a>
+<!--
+<a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">增加项目</a>
+<a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除项目</a>
+<input class="easyui-validatebox" type="text" name="email" data-options="validType:'email'" />
+ -->
+<!-- 增加项目 -->
+<div id="window_add" class="easyui-window" title="增加项目" style=""
+     data-options="iconCls:'icon-save',modal:true,closed:true">
+    <div>
+        <label for="name">中文名:</label>
+        <input class="easyui-validatebox" type="text" name="name_cn" id="name_cn" data-options="required:true" />
+    </div>
+    <div>
+        <label for="email">英文名:</label>
+        <input class="easyui-validatebox" type="text" name="name_en" id="name_en" data-options="required:true" />
+    </div>
+    <div>
+        <a id="btn_project_add" href="#" class="easyui-linkbutton" >增加</a>
+    </div>
+</div>
+<!-- 增加项目 -->
+
+<!-- 增加节点 -->
+<div id="window_add_node" class="easyui-window" title="增加节点" style=""
+     data-options="iconCls:'icon-save',modal:true,closed:true">
+    <div>
+        <label for="name">中文名:</label>
+        <input class="easyui-validatebox" type="text" name="node_name_cn" id="node_name_cn" data-options="required:true" />
+    </div>
+    <div>
+        <label for="email">英文名:</label>
+        <input class="easyui-validatebox" type="text" name="node_name_en" id="node_name_en" data-options="required:true" />
+    </div>
+    <input type="hidden" id="ai_recommend_tree_id" name="ai_recommend_tree_id" />
+    <input type="hidden" id="level" name="level" />
+    <input type="hidden" id="parent_id" name="parent_id" />
+    <div>
+        <a id="btn_object_add" href="#" class="easyui-linkbutton" >增加</a>
+    </div>
+</div>
+<!-- 增加节点 -->
+
+<!-- 增加树的右键 增加和删除节点 -->
+<div id="mm" class="easyui-menu" style="width:120px;">
+    <div onclick="append()" data-options="iconCls:'icon-add'">增加节点</div>
+    <div onclick="remove_1()" data-options="iconCls:'icon-remove'">移除节点</div>
+</div>
+<!-- 增加树的右键 增加和删除节点 -->
+</body>
+</html>
