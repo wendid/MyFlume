@@ -119,8 +119,88 @@ spring mvc 事例很好
 
 https://github.com/spring-projects/spring-mvc-showcase
 
+
+
 spring mvc
 
 http://www.cnblogs.com/fangjian0423/p/springmvc-request-param-analysis.html
 
 http://www.cnblogs.com/fangjian0423/category/589251.html
+
+———
+
+发现直接转化成int 或是其它类型报错Spring4 MVC json问题(406 Not Acceptable)
+
+http://blog.csdn.net/woshiwanxin102213/article/details/37521303
+
+用的方式1:
+
+<dependency>
+    <groupId>org.codehaus.jackson</groupId>
+    <artifactId>jackson-mapper-asl</artifactId>
+    <version>1.9.12</version>
+</dependency>
+---------
+<mvc:annotation-driven />
+
+<bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+   <property name="supportedMediaTypes">
+      <list>
+         <value>text/html;charset=UTF-8</value>
+      </list>
+   </property>
+</bean>
+
+<!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
+<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+   <property name="messageConverters">
+      <list>
+         <ref bean="mappingJacksonHttpMessageConverter" /><!-- json转换器 -->
+      </list>
+   </property>
+</bean>
+
+
+后来又不行了参考
+
+http://stackoverflow.com/questions/26825276/spring-4-restcontroller-json-characteristics-not-acceptable-according-to-the-re
+
+不需要加什么，spring4  需要这个
+
+as of Spring Framework 4.1, the minimum jackson version should be 2.1 (2.3 recommended), replace your jackson dependencies with this single one
+
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.1.2</version>
+    </dependency>
+One thing that hinders debugging in this case is that in tomcat 7.0.5x versions, this dependency is available in libs, unlike some previous version. So your code works fine in that version of tomcat just as it is
+
+Spring MVC 3.x version should still use the
+
+    <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>1.9.13</version>
+    </dependency>
+换成上面那个就ok了
+
+
+
+thymeleaf 例子
+
+https://github.com/thymeleaf/thymeleafexamples-petclinic
+
+
+
+—————
+
+thyme leaf resources 找不到静态文件
+
+文件目录：webapp/resources    开始的时候位置放错了（webapp/WEB-INF/resources）
+
+配置文件：<resources mapping="/resources/**" location="/resources/" />
+访问：<link rel="stylesheet" type="text/css" th:src="@{/resources/easyui_js/themes/default/easyui.css}" />
+
+————
+
