@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="tailor-made:war">
+  <artifact type="war" name="Tailor-made:war">
     <output-path>$PROJECT_DIR$/Tailor-made/target</output-path>
     <root id="archive" name="tailor-made-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="tailor-made:war exploded" />
+      <element id="artifact" artifact-name="Tailor-made:war exploded" />
     </root>
   </artifact>
 </component>
