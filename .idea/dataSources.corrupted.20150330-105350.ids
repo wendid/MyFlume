@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - business_tailor_made@localhost" uuid="6430d7f6-38d7-473f-a611-66731ed1111b">
+<<<<<<< Updated upstream
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+=======
+    <database-info product="MySQL" version="5.6.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="business_tailor_made"/>
+    <table name="ai_recommend_interface" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="info" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ai_recommend_rule_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ai_recommend_object" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name_cn" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="name_en" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="parent_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ai_recommend_project_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="level_num" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="has_children" sqlType="ENUM" precision="5" scale="0" nullable="true" jdbcType="1"/>
+      <column name="c_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ai_recommend_object1_object2" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ai_recommend_object_id1" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ai_recommend_object_id2" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ai_recommend_rule_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ai_recommend_rule" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="input" sqlType="ENUM" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="type" sqlType="ENUM" precision="7" scale="0" nullable="true" jdbcType="1"/>
+      <column name="sort" sqlType="ENUM" precision="4" scale="0" nullable="true" jdbcType="1"/>
+      <column name="sort_limit" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ai_recommend_rule_input" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="input" sqlType="ENUM" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="input_info" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ai_recommend_rule_sort" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="sort" sqlType="ENUM" precision="6" scale="0" nullable="true" jdbcType="1"/>
+      <column name="sort_info" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ai_recommend_rule_type" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="ENUM" precision="7" scale="0" nullable="true" jdbcType="1"/>
+      <column name="type_info" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ai_recommend_tree" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name_cn" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="name_en" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="ai_recommend_tree_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="level" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
+      <column name="has_children" sqlType="ENUM" precision="5" scale="0" nullable="true" jdbcType="1"/>
+      <column name="c_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sys_business_db" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name_cn" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="name_en" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="type_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="remark" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="c_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sys_node" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name_cn" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="name_en" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="type" sqlType="ENUM" precision="6" scale="0" nullable="true" jdbcType="1" def="J29iamVjdCc="/>
+      <column name="remark" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="c_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sys_node_ai_recommend_tree" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="sys_node_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="ai_recommend_tree_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sys_type" schema="" catalog="business_tailor_made" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name_cn" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="name_en" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+>>>>>>> Stashed changes
+  </data-source>
+</component>

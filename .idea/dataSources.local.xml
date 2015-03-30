@@ -2,7 +2,14 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="MySQL - business_tailor_made@localhost" uuid="6430d7f6-38d7-473f-a611-66731ed1111b">
+<<<<<<< Updated upstream
       <secret-storage>memory</secret-storage>
+=======
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>business_tailor_made.*</schema-pattern>
+      <default-schemas>business_tailor_made.*</default-schemas>
+>>>>>>> Stashed changes
     </data-source>
   </component>
 </project>

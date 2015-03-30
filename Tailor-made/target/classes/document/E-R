@@ -1,0 +1,44 @@
+第一版：
+知识点             sys_knowledge_point
+树形结构           sys_tree
+数组结构           sys_array
+图结构             sys_map
+栈形结构           sys_stack
+队列结构           sys_queue
+知识库             sys_knowledge_db
+知识点属性          sys_knowledge_property
+变更指令描述        sys_modify_info
+变更指令代码        sys_modify_code
+变更指令结果        sys_modify_result
+业务库             sys_business_db
+
+
+第二版：
+业务库            sys_business_db
+节点              sys_node
+树形结构           sys_tree
+数组结构           sys_array
+图结构             sys_map
+栈形结构           sys_stack
+队列结构           sys_queue
+测试模型           sys_model
+设计师             sys_designer
+模型接口           sys_model_interface
+二维绑定算法        sys_binding_2
+
+
+
+
+
+ps.tailor.code  执行、生成 sql java hibernate代码
+ps.tailor.knowledge  知识的所有操作
+ps.tailor.structure  业务库、树形、图、栈、队列结构
+ps.tailor.user  知识收集者、设计师
+
+
+
+
+
+
+
+

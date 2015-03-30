@@ -28,8 +28,24 @@
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+<<<<<<< Updated upstream
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Tailor-made" />
+=======
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Tailor-made" />
+  </component>
+  <component name="IdProvider" IDEtalkID="080E2A62030904A727F73863714216EB" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$USER_HOME$/Desktop/apache-maven-3.2.2" />
+      </MavenGeneralSettings>
+    </option>
+>>>>>>> Stashed changes
   </component>
   <component name="IdProvider" IDEtalkID="1D082EBE7CEC0F8D912108642EAC1EFA" />
   <component name="MavenProjectsManager">

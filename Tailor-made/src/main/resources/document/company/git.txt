@@ -24,6 +24,12 @@ git commit -m 'new2_12'
 
 git push
 
+—————
+
+git add -A
+git stash
+git pull
+git stash pop
 
 
 

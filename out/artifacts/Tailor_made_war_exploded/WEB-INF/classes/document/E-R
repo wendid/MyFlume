@@ -1,0 +1,40 @@
+知识点             sys_knowledge_point
+树形结构           sys_tree
+数组结构           sys_array
+图结构             sys_map
+栈形结构           sys_stack
+队列结构           sys_queue
+知识库             sys_knowledge_db
+知识点属性          sys_knowledge_property
+变更指令描述        sys_modify_info
+变更指令代码        sys_modify_code
+变更指令结果        sys_modify_result
+业务库             sys_business_db
+
+
+
+知识点 N    N 树形结构    1知识点属于N树形结构     1树形结构包含N知识点
+知识点 N    N 数组结构
+知识点 N    N 图结构
+知识点 N    N 栈结构
+知识点 N    N 队列结构
+知识点 N    N 知识库
+知识点 N    N 知识点属性
+知识点 N    N 树形结构
+
+
+知识点 N    N 知识库
+
+
+
+ps.tailor.code  执行、生成 sql java hibernate代码
+ps.tailor.knowledge  知识的所有操作
+ps.tailor.structure  树形、图、栈、队列结构
+
+
+
+
+
+
+
+
