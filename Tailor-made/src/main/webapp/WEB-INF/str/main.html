@@ -18,6 +18,30 @@
 <div style="margin:20px 0 10px 0;"></div>
 <div class="easyui-tabs" style="width:700px;height:250px">
     <div title="增加业务库" style="padding:10px">
+        <form th:object="${sysBusinessDb}" th:method="post" action="./ownerDetails.html"
+        th:action="@{/businessdb/adddb}" class="form-horizontal" id="add-owner-form">
+        <div class="control-group" th:classappend="${#fields.hasErrors('nameCn')} ? error">
+            <label class="control-label">中文姓名</label>
+            <div class="controls">
+                <input type="text" th:field="*{nameCn}" />
+                <span class="help-inline" th:errors="*{nameCn}">[error]</span>
+            </div>
+        </div>
+
+        <div class="control-group" th:classappend="${#fields.hasErrors('nameEn')} ? error">
+            <label class="control-label">nameEn</label>
+            <div class="controls">
+                <input type="text" th:field="*{nameEn}" />
+                <span class="help-inline" th:errors="*{nameEn}">[error]</span>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button  type="submit">增加</button>
+            <!--<button th:unless="${owner['new']}" type="submit">Update Owner</button>-->
+        </div>
+        </form>
+        <p class="answer" th:text="${sysBusinessDb.getNameCn()}"></p>
 
     </div>
     <div title="My Documents" style="padding:10px">

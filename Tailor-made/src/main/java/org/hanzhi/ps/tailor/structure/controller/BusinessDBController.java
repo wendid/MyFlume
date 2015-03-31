@@ -9,9 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,6 +25,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/businessdb")
+@SessionAttributes(types = SysBusinessDb.class)
 public class BusinessDBController extends BaseController<SysBusinessDb> {
 
     private final static Logger logger = LoggerFactory.getLogger(BusinessDBController.class);
@@ -39,27 +44,29 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
 //    @RequestMapping(value = "/showdb/{id}", method = RequestMethod.GET)
 //    public @ResponseBody Long showDB(@PathVariable("id") Long id) {
     @RequestMapping(value = "/showdb", method = RequestMethod.GET)
-    public @ResponseBody List<SysBusinessDb> showDB(@RequestParam(value="foo") int foo) {
-
-        List<SysBusinessDb> list = businessDBService.find(0,10);
+    public String  showDB(Model model) {
+        SysBusinessDb sysBusinessDb = new SysBusinessDb();
+        model.addAttribute(sysBusinessDb);
+//        List<SysBusinessDb> list = businessDBService.find(0,10);
 //        ModelAndView mv = new ModelAndView();
 //        mv.addObject("message", foo);
 //        mv.setViewName("user/users");
-        return list;
+        return "str/main";
     }
 
+
     //增加业务库
-    @RequestMapping(value = "/adddb", method = RequestMethod.GET)
-    public @ResponseBody List<SysBusinessDb> addDB() {
-        SysBusinessDb sb = new SysBusinessDb();
-        sb.setNameCn("haha");
-        sb.setcTime(Timestamp.valueOf("2014-03-04 11:12:13"));
-        sb.setNameEn("11");
-        sb.setRemark("dfdfdf");
-        sb.setTypeId(1);
-        Serializable s = businessDBService.save(sb);
+    @RequestMapping(value = "/adddb", method = RequestMethod.POST)
+    public String addDB(@Valid SysBusinessDb sysBusinessDb, BindingResult result, SessionStatus status) {
+//        SysBusinessDb sb = new SysBusinessDb();
+//        sb.setNameCn("haha");
+//        sb.setcTime(Timestamp.valueOf("2014-03-04 11:12:13"));
+//        sb.setNameEn("11");
+//        sb.setRemark("dfdfdf");
+//        sb.setTypeId(1);
+        Serializable s = businessDBService.save(sysBusinessDb);
 //        List<SysBusinessDb> list = businessDBService.find(0,10);
-        return null;
+        return "str/main";
     }
 
     //点击单个业务库展开，并显示其下的节点
