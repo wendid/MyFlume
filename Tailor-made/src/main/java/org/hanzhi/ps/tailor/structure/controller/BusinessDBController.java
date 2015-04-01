@@ -45,6 +45,8 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
 //    public @ResponseBody Long showDB(@PathVariable("id") Long id) {
     @RequestMapping(value = "/showdb", method = RequestMethod.GET)
     public String  showDB(Model model) {
+//        List<SysBusinessDb> list = businessDBService.find(0,1);
+//        model.addAttribute("dbList",list);
         SysBusinessDb sysBusinessDb = new SysBusinessDb();
         model.addAttribute(sysBusinessDb);
 //        List<SysBusinessDb> list = businessDBService.find(0,10);
@@ -54,6 +56,14 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
         return "str/main";
     }
 
+    @RequestMapping(value = "/db",method = RequestMethod.GET)
+    public @ResponseBody List<SysBusinessDb> dbJson()
+    {
+        List<SysBusinessDb> list = businessDBService.find(1,10);
+
+
+        return list;
+    }
 
     //增加业务库
     @RequestMapping(value = "/adddb", method = RequestMethod.POST)
@@ -65,6 +75,7 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
 //        sb.setRemark("dfdfdf");
 //        sb.setTypeId(1);
         Serializable s = businessDBService.save(sysBusinessDb);
+        status.setComplete();
 //        List<SysBusinessDb> list = businessDBService.find(0,10);
         return "str/main";
     }

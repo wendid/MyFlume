@@ -41,8 +41,28 @@
             <!--<button th:unless="${owner['new']}" type="submit">Update Owner</button>-->
         </div>
         </form>
-        <p class="answer" th:text="${sysBusinessDb.getNameCn()}"></p>
-
+        <!--<p class="answer" th:text="${sysBusinessDb.getNameCn()}"></p>-->
+        dbList
+        <table title="Reports using TreeGrid" class="easyui-treegrid" style="width:1000px;height:550px"
+               data-options="
+                url: '@{/businessdb/db}',
+               iconCls: 'icon-ok',
+                rownumbers: true,
+                animate: true,
+                collapsible: true,
+                fitColumns: true,
+                method: 'get',
+                idField: 'id',
+                treeField: 'nameCn',
+                showFooter: true
+            ">
+            <thead >
+            <tr>
+                <th data-options="field:'nameCn',width:180,editor:'text'">Region</th>
+                <th data-options="field:'nameEn',width:180,editor:'text'">Region</th>
+            </tr>
+            </thead>
+        </table>
     </div>
     <div title="My Documents" style="padding:10px">
 
