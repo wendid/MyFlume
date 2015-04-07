@@ -5817,3 +5817,198 @@ org.xml.sax.SAXParseException: 元素内容必须由格式正确的字符数据�
 2015-04-07 19:17:12.408 [] INFO  [Scanner-0] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
 2015-04-07 19:17:12.409 [] INFO  [Scanner-0] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
 2015-04-07 19:17:12.410 [] INFO  [Scanner-0] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000232: Schema update complete
+2015-04-07 19:37:24.344 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration boolean -> org.hibernate.type.BooleanType@41671bc1
+2015-04-07 19:37:24.347 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration boolean -> org.hibernate.type.BooleanType@41671bc1
+2015-04-07 19:37:24.348 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@41671bc1
+2015-04-07 19:37:24.349 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@343827c
+2015-04-07 19:37:24.351 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration true_false -> org.hibernate.type.TrueFalseType@7e740d0a
+2015-04-07 19:37:24.351 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration yes_no -> org.hibernate.type.YesNoType@1fb0dc3e
+2015-04-07 19:37:24.355 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte -> org.hibernate.type.ByteType@14069108
+2015-04-07 19:37:24.355 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte -> org.hibernate.type.ByteType@14069108
+2015-04-07 19:37:24.355 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@14069108
+2015-04-07 19:37:24.357 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration character -> org.hibernate.type.CharacterType@23ccc2bf
+2015-04-07 19:37:24.357 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration char -> org.hibernate.type.CharacterType@23ccc2bf
+2015-04-07 19:37:24.358 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@23ccc2bf
+2015-04-07 19:37:24.361 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration short -> org.hibernate.type.ShortType@5acd485a
+2015-04-07 19:37:24.361 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration short -> org.hibernate.type.ShortType@5acd485a
+2015-04-07 19:37:24.362 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Short -> org.hibernate.type.ShortType@5acd485a
+2015-04-07 19:37:24.364 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration integer -> org.hibernate.type.IntegerType@7df908dd
+2015-04-07 19:37:24.365 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration int -> org.hibernate.type.IntegerType@7df908dd
+2015-04-07 19:37:24.365 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7df908dd
+2015-04-07 19:37:24.366 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration long -> org.hibernate.type.LongType@40cc6052
+2015-04-07 19:37:24.367 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration long -> org.hibernate.type.LongType@40cc6052
+2015-04-07 19:37:24.367 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Long -> org.hibernate.type.LongType@40cc6052
+2015-04-07 19:37:24.369 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration float -> org.hibernate.type.FloatType@285a7e4b
+2015-04-07 19:37:24.369 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration float -> org.hibernate.type.FloatType@285a7e4b
+2015-04-07 19:37:24.369 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Float -> org.hibernate.type.FloatType@285a7e4b
+2015-04-07 19:37:24.371 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration double -> org.hibernate.type.DoubleType@63e39f46
+2015-04-07 19:37:24.371 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration double -> org.hibernate.type.DoubleType@63e39f46
+2015-04-07 19:37:24.371 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@63e39f46
+2015-04-07 19:37:24.373 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@10c6db9a
+2015-04-07 19:37:24.373 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@10c6db9a
+2015-04-07 19:37:24.374 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration big_integer -> org.hibernate.type.BigIntegerType@566a0c79
+2015-04-07 19:37:24.374 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@566a0c79
+2015-04-07 19:37:24.375 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration string -> org.hibernate.type.StringType@7f971ab2
+2015-04-07 19:37:24.375 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.String -> org.hibernate.type.StringType@7f971ab2
+2015-04-07 19:37:24.376 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration nstring -> org.hibernate.type.StringNVarcharType@77134b89
+2015-04-07 19:37:24.377 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@3551b641
+2015-04-07 19:37:24.378 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration url -> org.hibernate.type.UrlType@6f66b6e9
+2015-04-07 19:37:24.378 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.net.URL -> org.hibernate.type.UrlType@6f66b6e9
+2015-04-07 19:37:24.380 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration date -> org.hibernate.type.DateType@ea2d3b7
+2015-04-07 19:37:24.380 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Date -> org.hibernate.type.DateType@ea2d3b7
+2015-04-07 19:37:24.382 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration time -> org.hibernate.type.TimeType@103c54
+2015-04-07 19:37:24.382 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Time -> org.hibernate.type.TimeType@103c54
+2015-04-07 19:37:24.384 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration timestamp -> org.hibernate.type.TimestampType@48f7a5cb
+2015-04-07 19:37:24.384 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@48f7a5cb
+2015-04-07 19:37:24.384 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Date -> org.hibernate.type.TimestampType@48f7a5cb
+2015-04-07 19:37:24.386 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@7ddd05d0
+2015-04-07 19:37:24.387 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration calendar -> org.hibernate.type.CalendarType@6ff271dc
+2015-04-07 19:37:24.387 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@6ff271dc
+2015-04-07 19:37:24.387 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@6ff271dc
+2015-04-07 19:37:24.388 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@3e09537d
+2015-04-07 19:37:24.389 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration locale -> org.hibernate.type.LocaleType@6b6fa5e3
+2015-04-07 19:37:24.389 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6b6fa5e3
+2015-04-07 19:37:24.391 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration currency -> org.hibernate.type.CurrencyType@41b0bc07
+2015-04-07 19:37:24.391 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@41b0bc07
+2015-04-07 19:37:24.392 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration timezone -> org.hibernate.type.TimeZoneType@4a2d12b
+2015-04-07 19:37:24.392 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4a2d12b
+2015-04-07 19:37:24.393 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration class -> org.hibernate.type.ClassType@c48f1c2
+2015-04-07 19:37:24.393 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Class -> org.hibernate.type.ClassType@c48f1c2
+2015-04-07 19:37:24.395 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@53ec7c54
+2015-04-07 19:37:24.395 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@53ec7c54
+2015-04-07 19:37:24.396 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@3d1f5e84
+2015-04-07 19:37:24.397 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@3354eefc
+2015-04-07 19:37:24.399 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration binary -> org.hibernate.type.BinaryType@191607c
+2015-04-07 19:37:24.399 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte[] -> org.hibernate.type.BinaryType@191607c
+2015-04-07 19:37:24.399 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [B -> org.hibernate.type.BinaryType@191607c
+2015-04-07 19:37:24.400 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@6690460
+2015-04-07 19:37:24.400 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@6690460
+2015-04-07 19:37:24.400 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@6690460
+2015-04-07 19:37:24.401 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration image -> org.hibernate.type.ImageType@1fb952e3
+2015-04-07 19:37:24.402 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration characters -> org.hibernate.type.CharArrayType@262ef77f
+2015-04-07 19:37:24.402 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration char[] -> org.hibernate.type.CharArrayType@262ef77f
+2015-04-07 19:37:24.403 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [C -> org.hibernate.type.CharArrayType@262ef77f
+2015-04-07 19:37:24.404 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@d96653e
+2015-04-07 19:37:24.404 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@d96653e
+2015-04-07 19:37:24.404 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@d96653e
+2015-04-07 19:37:24.405 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration text -> org.hibernate.type.TextType@4fc0e1e3
+2015-04-07 19:37:24.406 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration ntext -> org.hibernate.type.NTextType@495d114a
+2015-04-07 19:37:24.409 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration blob -> org.hibernate.type.BlobType@18182506
+2015-04-07 19:37:24.410 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@18182506
+2015-04-07 19:37:24.410 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@6dce9b19
+2015-04-07 19:37:24.413 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration clob -> org.hibernate.type.ClobType@17c02eb9
+2015-04-07 19:37:24.414 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@17c02eb9
+2015-04-07 19:37:24.417 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration nclob -> org.hibernate.type.NClobType@3e5d7592
+2015-04-07 19:37:24.417 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@3e5d7592
+2015-04-07 19:37:24.417 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1635f6c2
+2015-04-07 19:37:24.418 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@53b2fa08
+2015-04-07 19:37:24.419 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration serializable -> org.hibernate.type.SerializableType@10555cfa
+2015-04-07 19:37:24.422 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration object -> org.hibernate.type.ObjectType@536ac63
+2015-04-07 19:37:24.422 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@536ac63
+2015-04-07 19:37:24.422 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5452fc62
+2015-04-07 19:37:24.423 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1437b12e
+2015-04-07 19:37:24.423 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@54514d60
+2015-04-07 19:37:24.423 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@25af04df
+2015-04-07 19:37:24.423 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@568dfcd
+2015-04-07 19:37:24.423 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@283d0e81
+2015-04-07 19:37:24.423 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@40834bca
+2015-04-07 19:37:24.423 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@6be4dbdc
+2015-04-07 19:37:24.441 [] INFO  [main] org.hibernate.annotations.common.Version :HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-04-07 19:37:24.450 [] INFO  [main] org.hibernate.Version :HHH000412: Hibernate Core {4.3.5.Final}
+2015-04-07 19:37:24.453 [] INFO  [main] org.hibernate.cfg.Environment :HHH000206: hibernate.properties not found
+2015-04-07 19:37:24.454 [] INFO  [main] org.hibernate.cfg.Environment :HHH000021: Bytecode provider name : javassist
+2015-04-07 19:37:24.849 [] INFO  [main] org.hibernate.dialect.Dialect :HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-04-07 19:37:24.881 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration org.hibernate.envers.internal.entities.RevisionTypeType -> org.hibernate.type.CustomType@1bb0b34e
+2015-04-07 19:37:25.104 [] INFO  [main] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator :HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-04-07 19:37:25.109 [] INFO  [main] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory :HHH000397: Using ASTQueryTranslatorFactory
+2015-04-07 19:37:25.129 [] TRACE [main] org.hibernate.type.TypeFactory :Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@307e7432
+2015-04-07 19:37:25.541 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000228: Running hbm2ddl schema update
+2015-04-07 19:37:25.541 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000102: Fetching database metadata
+2015-04-07 19:37:25.549 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000396: Updating schema
+2015-04-07 19:37:25.582 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.ai_recommend_interface
+2015-04-07 19:37:25.583 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, ai_recommend_rule_id, info]
+2015-04-07 19:37:25.583 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.583 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.591 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.ai_recommend_object
+2015-04-07 19:37:25.591 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, name_cn, ai_recommend_project_id, has_children, name_en, c_time, level_num, parent_id]
+2015-04-07 19:37:25.591 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.592 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.622 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.ai_recommend_object1_object2
+2015-04-07 19:37:25.622 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, ai_recommend_rule_id, ai_recommend_object_id1, ai_recommend_object_id2]
+2015-04-07 19:37:25.622 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.622 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.654 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.ai_recommend_rule
+2015-04-07 19:37:25.654 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, input, sort, sort_limit, type]
+2015-04-07 19:37:25.654 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.654 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.662 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.ai_recommend_rule_input
+2015-04-07 19:37:25.662 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, input, input_info]
+2015-04-07 19:37:25.662 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.662 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.687 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.ai_recommend_rule_sort
+2015-04-07 19:37:25.687 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, sort, sort_info]
+2015-04-07 19:37:25.688 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.688 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.695 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.ai_recommend_rule_type
+2015-04-07 19:37:25.696 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, type_info, type]
+2015-04-07 19:37:25.696 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.696 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.706 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.ai_recommend_tree
+2015-04-07 19:37:25.706 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, name_cn, level, has_children, name_en, c_time, ai_recommend_tree_id]
+2015-04-07 19:37:25.706 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.706 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.715 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.sys_business_db
+2015-04-07 19:37:25.715 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, name_cn, remark, name_en, c_time, type_id]
+2015-04-07 19:37:25.716 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.716 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.739 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.sys_node
+2015-04-07 19:37:25.739 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, name_cn, remark, name_en, c_time, type]
+2015-04-07 19:37:25.739 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.739 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.746 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.sys_node_ai_recommend_tree
+2015-04-07 19:37:25.746 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, sys_node_id, ai_recommend_tree_id]
+2015-04-07 19:37:25.747 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.747 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.756 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: business_tailor_made.sys_type
+2015-04-07 19:37:25.756 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, name_cn, name_en]
+2015-04-07 19:37:25.756 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.756 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.768 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: test.sys_users
+2015-04-07 19:37:25.768 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, user_name, age, nice_name]
+2015-04-07 19:37:25.768 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-04-07 19:37:25.769 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-04-07 19:37:25.771 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000232: Schema update complete
+2015-04-07 19:37:46.221 [] INFO  [qtp1798061506-17] org.thymeleaf.TemplateEngine :[THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2015-04-07 19:37:46.266 [] INFO  [qtp1798061506-17] org.thymeleaf.templateresolver.AbstractTemplateResolver :[THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.ServletContextTemplateResolver
+2015-04-07 19:37:46.266 [] INFO  [qtp1798061506-17] org.thymeleaf.templateresolver.AbstractTemplateResolver :[THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2015-04-07 19:37:46.267 [] INFO  [qtp1798061506-17] org.thymeleaf.messageresolver.AbstractMessageResolver :[THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2015-04-07 19:37:46.267 [] INFO  [qtp1798061506-17] org.thymeleaf.messageresolver.AbstractMessageResolver :[THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2015-04-07 19:37:46.271 [] INFO  [qtp1798061506-17] org.thymeleaf.TemplateEngine.CONFIG :[THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.ServletContextTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2015-04-07 19:37:46.271 [] INFO  [qtp1798061506-17] org.thymeleaf.TemplateEngine :[THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2015-04-07 19:37:47.025 [] DEBUG [qtp1798061506-17] org.hibernate.SQL :select distinct sysbusines0_.id as id1_8_, sysbusines0_.c_time as c_time2_8_, sysbusines0_.name_cn as name_cn3_8_, sysbusines0_.name_en as name_en4_8_, sysbusines0_.remark as remark5_8_, sysbusines0_.type_id as type_id6_8_ from business_tailor_made.sys_business_db sysbusines0_ limit ?
+2015-04-07 19:37:47.025 [] DEBUG [qtp1798061506-19] org.hibernate.SQL :select distinct sysbusines0_.id as id1_8_, sysbusines0_.c_time as c_time2_8_, sysbusines0_.name_cn as name_cn3_8_, sysbusines0_.name_en as name_en4_8_, sysbusines0_.remark as remark5_8_, sysbusines0_.type_id as type_id6_8_ from business_tailor_made.sys_business_db sysbusines0_ limit ?
+2015-04-07 19:37:49.743 [] DEBUG [qtp1798061506-17] org.hibernate.SQL :select distinct sysbusines0_.id as id1_8_, sysbusines0_.c_time as c_time2_8_, sysbusines0_.name_cn as name_cn3_8_, sysbusines0_.name_en as name_en4_8_, sysbusines0_.remark as remark5_8_, sysbusines0_.type_id as type_id6_8_ from business_tailor_made.sys_business_db sysbusines0_ limit ?
+2015-04-07 19:37:49.780 [] DEBUG [qtp1798061506-17] org.hibernate.SQL :select distinct sysbusines0_.id as id1_8_, sysbusines0_.c_time as c_time2_8_, sysbusines0_.name_cn as name_cn3_8_, sysbusines0_.name_en as name_en4_8_, sysbusines0_.remark as remark5_8_, sysbusines0_.type_id as type_id6_8_ from business_tailor_made.sys_business_db sysbusines0_ limit ?
+2015-04-07 19:38:02.449 [] DEBUG [qtp1798061506-17] org.hibernate.SQL :insert into business_tailor_made.sys_business_db (c_time, name_cn, name_en, remark, type_id) values (?, ?, ?, ?, ?)
+2015-04-07 19:38:02.458 [] TRACE [qtp1798061506-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [TIMESTAMP] - [null]
+2015-04-07 19:38:02.459 [] TRACE [qtp1798061506-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - [我时啦]
+2015-04-07 19:38:02.459 [] TRACE [qtp1798061506-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [3] as [VARCHAR] - [12]
+2015-04-07 19:38:02.459 [] TRACE [qtp1798061506-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [4] as [VARCHAR] - [null]
+2015-04-07 19:38:02.460 [] TRACE [qtp1798061506-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [5] as [INTEGER] - [null]
+2015-04-07 19:38:02.770 [] DEBUG [qtp1798061506-17] org.hibernate.SQL :select distinct sysbusines0_.id as id1_8_, sysbusines0_.c_time as c_time2_8_, sysbusines0_.name_cn as name_cn3_8_, sysbusines0_.name_en as name_en4_8_, sysbusines0_.remark as remark5_8_, sysbusines0_.type_id as type_id6_8_ from business_tailor_made.sys_business_db sysbusines0_ limit ?
+2015-04-07 19:38:02.813 [] DEBUG [qtp1798061506-17] org.hibernate.SQL :select distinct sysbusines0_.id as id1_8_, sysbusines0_.c_time as c_time2_8_, sysbusines0_.name_cn as name_cn3_8_, sysbusines0_.name_en as name_en4_8_, sysbusines0_.remark as remark5_8_, sysbusines0_.type_id as type_id6_8_ from business_tailor_made.sys_business_db sysbusines0_ limit ?
