@@ -10,7 +10,35 @@
     <script type="text/javascript" th:src="@{/resources/easyui_js/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/resources/easyui_js/jquery.easyui.min.js}"></script>
     <script type="text/javascript" th:src="@{/resources/js/var.js}"></script>
+    <script>
+        function getDB()
+        {
+//
+            $('#dbTree').treegrid({
+                url:'/businessdb/db',
+                loadFilter: function (data){
+                    var len = data.length;
+                    data.rows = data;
+                    $.each(data.rows, function(i,item) {
+                        item._parentId = -1;
 
+                    });
+//                    data.total = data.more;
+                    data.total = len;
+                    return data;
+                },
+                idField:'id',
+                treeField:'name',
+                columns:[[
+                    {field:'id',title:'Task Name',width:180},
+                    {field:'nameCn',title:'nameCn',width:60,align:'right'},
+                    {field:'nameEn',title:'nameCn',width:80},
+                    {field:'end',title:'End Date',width:80}
+                ]]
+            });
+        }
+//        getDB();
+    </script>
 </head>
 <body>
 <h2>Basic Tabs</h2>
@@ -43,19 +71,7 @@
         </form>
         <!--<p class="answer" th:text="${sysBusinessDb.getNameCn()}"></p>-->
         dbList
-        <table title="Reports using TreeGrid" class="easyui-treegrid" style="width:1000px;height:550px"
-               data-options="
-                url: '@{/businessdb/db}',
-               iconCls: 'icon-ok',
-                rownumbers: true,
-                animate: true,
-                collapsible: true,
-                fitColumns: true,
-                method: 'get',
-                idField: 'id',
-                treeField: 'nameCn',
-                showFooter: true
-            ">
+        <table id="dbTree" title="Reports using TreeGrid" class="easyui-treegrid" style="width:1000px;height:550px">
             <thead >
             <tr>
                 <th data-options="field:'nameCn',width:180,editor:'text'">Region</th>
@@ -74,3 +90,6 @@
 
 </body>
 </html>
+<script>
+    getDB();
+</script>

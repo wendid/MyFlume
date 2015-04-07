@@ -56,7 +56,7 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
         return "str/main";
     }
 
-    @RequestMapping(value = "/db",method = RequestMethod.GET)
+    @RequestMapping(value = "/db",method = RequestMethod.POST)
     public @ResponseBody List<SysBusinessDb> dbJson()
     {
         List<SysBusinessDb> list = businessDBService.find(1,10);
