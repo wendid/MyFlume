@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.hanzhi.ps.tailor.structure.entity.SysBusinessDb;
 import org.hanzhi.ps.tailor.structure.service.BusinessDBServiceI;
+import org.hanzhi.ps.tailor.util.HqlFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class BusinessDBServiceImpl extends BaseServiceImpl<SysBusinessDb> implements BusinessDBServiceI {
 
+    @Override
+    public List<SysBusinessDb> find(int pageNo, int pageSize) {
+        return find(" from SysBusinessDb order by id desc ",pageNo,pageSize);
+    }
 //	@Autowired
 //	private BaseDaoI<Syresource> resourceDao;
 //

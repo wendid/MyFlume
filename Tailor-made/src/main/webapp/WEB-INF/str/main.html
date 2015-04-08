@@ -11,11 +11,11 @@
     <script type="text/javascript" th:src="@{/resources/easyui_js/jquery.easyui.min.js}"></script>
     <script type="text/javascript" th:src="@{/resources/js/var.js}"></script>
     <script>
-        function getDB()
+        function getDB(pageNumber,pageSize)
         {
-//
+            var actionUrl = '/businessdb/db/'+pageNumber+'/'+pageSize;
             $('#dbTree').treegrid({
-                url:'/businessdb/db',
+                url:actionUrl,
                 loadFilter: function (data){
                     var len = data.length;
                     data.rows = data;
@@ -37,14 +37,38 @@
                 ]]
             });
         }
-//        getDB();
+
+        function page()
+        {
+            $('#pageDiv').pagination({
+                onSelectPage:function(pageNumber, pageSize){
+                    $(this).pagination('loading');
+                    getDB(pageNumber, pageSize);
+                    $(this).pagination('loaded');
+                }
+            });
+        }
+
+        $(document).ready(function(){
+            var url="/businessdb/count";    //相同域名用这个方法
+//            var url="/businessdb/count?callback=?";     // 这个方法适用于不同域名的回调函数
+                $.getJSON(url,function(data){
+                    $('#pageDiv').pagination({
+                        total:data,
+                        pageSize:10
+                    });
+                });
+
+            page();
+        });
+        //        getDB();
     </script>
 </head>
 <body>
 <h2>Basic Tabs</h2>
 <p>Click tab strip to swap tab panel content.</p>
 <div style="margin:20px 0 10px 0;"></div>
-<div class="easyui-tabs" style="width:700px;height:250px">
+<div class="easyui-tabs" style="width:800px;height:650px">
     <div title="增加业务库" style="padding:10px">
         <form th:object="${sysBusinessDb}" th:method="post" action="./ownerDetails.html"
         th:action="@{/businessdb/adddb}" class="form-horizontal" id="add-owner-form">
@@ -70,8 +94,7 @@
         </div>
         </form>
         <!--<p class="answer" th:text="${sysBusinessDb.getNameCn()}"></p>-->
-        dbList
-        <table id="dbTree" title="Reports using TreeGrid" class="easyui-treegrid" style="width:1000px;height:550px">
+        <table id="dbTree" title="Reports using TreeGrid" class="easyui-treegrid" style="width:600px;height:550px">
             <thead >
             <tr>
                 <th data-options="field:'nameCn',width:180,editor:'text'">Region</th>
@@ -79,6 +102,7 @@
             </tr>
             </thead>
         </table>
+        <div id="pageDiv" class="easyui-pagination" style="background:#efefef;border:1px solid #ccc;width:600px;"></div>
     </div>
     <div title="My Documents" style="padding:10px">
 
@@ -91,5 +115,5 @@
 </body>
 </html>
 <script>
-    getDB();
+    getDB(1,10);
 </script>

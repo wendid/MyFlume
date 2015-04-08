@@ -32,4 +32,9 @@
 		<property name="viewNames" value="user/*,str/*" />
 	</bean>
 
+	<!--加上这个可以直接跳转 return "redirect:/businessdb/showdb"; 否则无法跳转-->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewNames" value="redirect*" />
+	</bean>
+
 </beans>

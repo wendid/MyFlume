@@ -39,7 +39,7 @@ public class HqlFilter {
 	private Map<String, Object> params = new HashMap<String, Object>();// 条件参数
 	private StringBuffer hql = new StringBuffer();
 	private String sort;// 排序字段
-	private String order = "asc";// asc/desc
+	private String order = "desc";// asc/desc
 
 	/**
 	 * 默认构造

@@ -56,10 +56,11 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
         return "str/main";
     }
 
-    @RequestMapping(value = "/db",method = RequestMethod.POST)
-    public @ResponseBody List<SysBusinessDb> dbJson()
+    @RequestMapping(value = "/db/{pageNo}/{pageSize}",method = RequestMethod.POST)
+//    @RequestMapping(value = "/db/{pageNo}/{pageSize}",method = RequestMethod.GET)
+    public @ResponseBody List<SysBusinessDb> dbJson(@PathVariable("pageNo") int pageNo,@PathVariable("pageSize") int pageSize)
     {
-        List<SysBusinessDb> list = businessDBService.find(1,10);
+        List<SysBusinessDb> list = businessDBService.find(pageNo,pageSize);
 
 
         return list;
@@ -68,23 +69,17 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
     //增加业务库
     @RequestMapping(value = "/adddb", method = RequestMethod.POST)
     public String addDB(@Valid SysBusinessDb sysBusinessDb, BindingResult result, SessionStatus status) {
-//        SysBusinessDb sb = new SysBusinessDb();
-//        sb.setNameCn("haha");
-//        sb.setcTime(Timestamp.valueOf("2014-03-04 11:12:13"));
-//        sb.setNameEn("11");
-//        sb.setRemark("dfdfdf");
-//        sb.setTypeId(1);
+//
         Serializable s = businessDBService.save(sysBusinessDb);
         status.setComplete();
-//        List<SysBusinessDb> list = businessDBService.find(0,10);
-        return "str/main";
+        return "redirect:/businessdb/showdb";
     }
 
     //点击单个业务库展开，并显示其下的节点
     @RequestMapping(value = "/count", method = RequestMethod.GET)
-    public String findNodesById() {
-
-        return "str/main";
+    public @ResponseBody Long findNodesById() {
+        Long count = businessDBService.count();
+        return count;
     }
 }
 
