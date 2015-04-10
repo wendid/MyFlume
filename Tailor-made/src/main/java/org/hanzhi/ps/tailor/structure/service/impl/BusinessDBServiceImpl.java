@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 /**
  * 机构业务
  * 
- * @author Somnus
+ * @author hanzhi
  * 
  */
 @Service

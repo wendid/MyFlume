@@ -47,12 +47,6 @@
                     $(this).pagination('loaded');
                 }
             });
-            $('#dbTree').treegrid({
-                onClickRow:function(row){
-                    window.location='/businessdb/db_detail/'+row.id;
-                }
-            });
-
         }
 
         $(document).ready(function(){
@@ -74,10 +68,9 @@
 <h2>Basic Tabs</h2>
 <p>Click tab strip to swap tab panel content.</p>
 <div style="margin:20px 0 10px 0;"></div>
-<div class="easyui-tabs" style="width:800px;height:650px">
     <div title="增加业务库" style="padding:10px">
-        <form th:object="${sysBusinessDb}" th:method="post" action="./ownerDetails.html"
-        th:action="@{/businessdb/adddb}" class="form-horizontal" id="add-owner-form">
+        <form th:object="${sysBusinessPart}" th:method="post" action=""
+        th:action="@{/businessdb/add_part}" class="form-horizontal" id="add-owner-form">
         <div class="control-group" th:classappend="${#fields.hasErrors('nameCn')} ? error">
             <label class="control-label">中文姓名</label>
             <div class="controls">
@@ -110,13 +103,7 @@
         </table>
         <div id="pageDiv" class="easyui-pagination" style="background:#efefef;border:1px solid #ccc;width:600px;"></div>
     </div>
-    <div title="My Documents" style="padding:10px">
 
-    </div>
-    <div title="Help" data-options="iconCls:'icon-help',closable:true" style="padding:10px">
-        This is the help content.
-    </div>
-</div>
 
 </body>
 </html>

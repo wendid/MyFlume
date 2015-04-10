@@ -1,9 +1,20 @@
+-- 业务库
 CREATE TABLE sys_business_db(
 	id INT NOT NULL AUTO_INCREMENT,
 	name_cn varchar(60) default '' ,
 	name_en varchar(60) default '' ,
 	type_id int,
-	remark varchar(100) default '' ,
+	remark varchar(100) default '' ,-- 备注
+	c_time TIMESTAMP not NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY key(id)
+)ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+CREATE TABLE sys_business_parts(
+	id INT NOT NULL AUTO_INCREMENT,
+	name_cn varchar(60) default '' ,
+	name_en varchar(60) default '' ,
+	db_id int,       -- db 1 对 N parts
+	remark varchar(100) default '' ,-- 备注
 	c_time TIMESTAMP not NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY key(id)
 )ENGINE = MyISAM DEFAULT CHARSET = utf8;
