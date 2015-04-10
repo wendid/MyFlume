@@ -11,9 +11,10 @@
     <script type="text/javascript" th:src="@{/resources/easyui_js/jquery.easyui.min.js}"></script>
     <script type="text/javascript" th:src="@{/resources/js/var.js}"></script>
     <script>
+        var db_id = 0;
         function getDB(pageNumber,pageSize)
         {
-            var actionUrl = '/businessdb/db/'+pageNumber+'/'+pageSize;
+            var actionUrl = '/businessdb/dbpart/'+db_id+'/'+pageNumber+'/'+pageSize;
             $('#dbTree').treegrid({
                 url:actionUrl,
                 loadFilter: function (data){
@@ -68,9 +69,10 @@
 <h2>Basic Tabs</h2>
 <p>Click tab strip to swap tab panel content.</p>
 <div style="margin:20px 0 10px 0;"></div>
-    <div title="增加业务库" style="padding:10px">
-        <form th:object="${sysBusinessPart}" th:method="post" action=""
-        th:action="@{/businessdb/add_part}" class="form-horizontal" id="add-owner-form">
+    <div title="增加业务零件" style="padding:10px">
+        <input type="hidden" id="db_id" th:value="${sys_db.getId()}"  />
+        <form th:object="${sysBusinessPart}" th:method="post"
+        th:action="@{/businessdb/addpart/1}" class="form-horizontal" id="add-owner-form">
         <div class="control-group" th:classappend="${#fields.hasErrors('nameCn')} ? error">
             <label class="control-label">中文姓名</label>
             <div class="controls">
@@ -93,7 +95,7 @@
         </div>
         </form>
         <!--<p class="answer" th:text="${sysBusinessDb.getNameCn()}"></p>-->
-        <table id="dbTree" title="Reports using TreeGrid" class="easyui-treegrid" style="width:600px;height:550px">
+        <table id="partTree" title="Reports using TreeGrid" class="easyui-treegrid" style="width:600px;height:550px">
             <thead >
             <tr>
                 <th data-options="field:'nameCn',width:180,editor:'text'">Region</th>
@@ -108,5 +110,6 @@
 </body>
 </html>
 <script>
+    db_id = $("#db_id").val();
     getDB(1,10);
 </script>

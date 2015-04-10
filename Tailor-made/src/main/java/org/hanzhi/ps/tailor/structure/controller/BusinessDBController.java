@@ -56,7 +56,7 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
     }
 
 
-    @RequestMapping(value = "/db_detail/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/dbdetail/{id}", method = RequestMethod.GET)
     public String  dbDetail(Model model,@PathVariable("id") int id) {
 //        List<SysBusinessDb> list = businessDBService.find(0,1);
 //        model.addAttribute("dbList",list);
@@ -70,11 +70,19 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
     }
 
     @RequestMapping(value = "/db/{pageNo}/{pageSize}",method = RequestMethod.POST)
-//    @RequestMapping(value = "/db/{pageNo}/{pageSize}",method = RequestMethod.GET)
-    public @ResponseBody List<SysBusinessDb> dbJson(@PathVariable("pageNo") int pageNo,@PathVariable("pageSize") int pageSize)
+     public @ResponseBody List<SysBusinessDb> dbJson(@PathVariable("pageNo") int pageNo,@PathVariable("pageSize") int pageSize)
     {
         List<SysBusinessDb> list = businessDBService.find(pageNo,pageSize);
 
+        return list;
+    }
+
+    @RequestMapping(value = "/dbpart/{db_id}/{pageNo}/{pageSize}",method = RequestMethod.POST)
+    public @ResponseBody List<SysBusinessPart> dbPartJson(@PathVariable("pageNo") int pageNo,
+                                                        @PathVariable("pageSize") int pageSize,
+                                                        @PathVariable("db_id") int db_id)
+    {
+        List<SysBusinessPart> list = businessPartService.findByDBId(db_id, pageNo, pageSize);
 
         return list;
     }
@@ -89,20 +97,28 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
     }
 
     //增加业务库
-    @RequestMapping(value = "/add_part", method = RequestMethod.POST)
-    public String addPart(@Valid SysBusinessPart sysBusinessPart, BindingResult result, SessionStatus status) {
+    @RequestMapping(value = "/addpart/{db_id}", method = RequestMethod.POST)
+    public String addPart(@Valid SysBusinessPart sysBusinessPart, BindingResult result, SessionStatus status,
+    @PathVariable("db_id") int db_id) {
 //
-//        businessDBService.get
+        SysBusinessDb sysBusinessDb = businessDBService.getById(db_id);
+        sysBusinessPart.setSysBusinessDb(sysBusinessDb);
         Serializable s = businessPartService.save(sysBusinessPart);
         status.setComplete();
-        return "redirect:/businessdb/db_detail/" + sysBusinessPart.getSysBusinessDb().getId();
+        return "redirect:/businessdb/dbdetail/{db_id}";
     }
 
 
     //点击单个业务库展开，并显示其下的节点
     @RequestMapping(value = "/count", method = RequestMethod.GET)
-    public @ResponseBody Long findNodesById() {
+     public @ResponseBody Long findNodesById() {
         Long count = businessDBService.count();
+        return count;
+    }
+
+    @RequestMapping(value = "/partcount/{db_id}", method = RequestMethod.GET)
+    public @ResponseBody Long findPartNodesById(@PathVariable("db_id") int db_id) {
+        Long count = businessPartService.count(db_id);
         return count;
     }
 }
