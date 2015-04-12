@@ -15,7 +15,7 @@
         function getDB(pageNumber,pageSize)
         {
             var actionUrl = '/businessdb/dbpart/'+db_id+'/'+pageNumber+'/'+pageSize;
-            $('#dbTree').treegrid({
+            $('#partTree').treegrid({
                 url:actionUrl,
                 loadFilter: function (data){
                     var len = data.length;
@@ -51,7 +51,7 @@
         }
 
         $(document).ready(function(){
-            var url="/businessdb/count";    //相同域名用这个方法
+            var url="/businessdb/partcount/"+$("#db_id").val();    //相同域名用这个方法
 //            var url="/businessdb/count?callback=?";     // 这个方法适用于不同域名的回调函数
                 $.getJSON(url,function(data){
                     $('#pageDiv').pagination({
@@ -72,7 +72,7 @@
     <div title="增加业务零件" style="padding:10px">
         <input type="hidden" id="db_id" th:value="${sys_db.getId()}"  />
         <form th:object="${sysBusinessPart}" th:method="post"
-        th:action="@{/businessdb/addpart/1}" class="form-horizontal" id="add-owner-form">
+        th:action="@{/businessdb/addpart/}" class="form-horizontal" id="add-part-form">
         <div class="control-group" th:classappend="${#fields.hasErrors('nameCn')} ? error">
             <label class="control-label">中文姓名</label>
             <div class="controls">
@@ -95,7 +95,7 @@
         </div>
         </form>
         <!--<p class="answer" th:text="${sysBusinessDb.getNameCn()}"></p>-->
-        <table id="partTree" title="Reports using TreeGrid" class="easyui-treegrid" style="width:600px;height:550px">
+        <table id="partTree" th:title="${sys_db.getNameCn()}"  class="easyui-treegrid" style="width:600px;height:550px">
             <thead >
             <tr>
                 <th data-options="field:'nameCn',width:180,editor:'text'">Region</th>
@@ -111,5 +111,6 @@
 </html>
 <script>
     db_id = $("#db_id").val();
+    $("#add-part-form").attr("action","/businessdb/addpart/"+db_id);
     getDB(1,10);
 </script>

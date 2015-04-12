@@ -72,7 +72,7 @@ public class SysBusinessPart implements Serializable {
 //    }
 
     @Basic
-    @Column(name = "remark", nullable = true, insertable = true, updatable = true, length = 100)
+    @Column(name = "remark", insertable = true, updatable = true, length = 100)
     public String getRemark() {
         return remark;
     }
@@ -82,7 +82,7 @@ public class SysBusinessPart implements Serializable {
     }
 
     @Basic
-    @Column(name = "c_time", nullable = false, insertable = true, updatable = true)
+    @Column(name = "c_time",  insertable = true, updatable = true)
     public Timestamp getcTime() {
         return cTime;
     }

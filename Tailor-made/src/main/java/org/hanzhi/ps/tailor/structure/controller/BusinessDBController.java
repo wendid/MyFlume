@@ -100,7 +100,6 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
     @RequestMapping(value = "/addpart/{db_id}", method = RequestMethod.POST)
     public String addPart(@Valid SysBusinessPart sysBusinessPart, BindingResult result, SessionStatus status,
     @PathVariable("db_id") int db_id) {
-//
         SysBusinessDb sysBusinessDb = businessDBService.getById(db_id);
         sysBusinessPart.setSysBusinessDb(sysBusinessDb);
         Serializable s = businessPartService.save(sysBusinessPart);
@@ -115,7 +114,7 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
         Long count = businessDBService.count();
         return count;
     }
-
+    //
     @RequestMapping(value = "/partcount/{db_id}", method = RequestMethod.GET)
     public @ResponseBody Long findPartNodesById(@PathVariable("db_id") int db_id) {
         Long count = businessPartService.count(db_id);

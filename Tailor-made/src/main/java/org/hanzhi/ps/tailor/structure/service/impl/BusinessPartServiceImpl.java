@@ -14,12 +14,12 @@ public class BusinessPartServiceImpl extends BaseServiceImpl<SysBusinessPart> im
 
     @Override
     public List<SysBusinessPart> findByDBId(int db_id, int pageNo, int pageSize) {
-        return find(" from SysBusinessParts where db_id='{db_id}' order by id desc ", pageNo, pageSize);
+        return find(" from SysBusinessPart where db_id='"+db_id+"' order by id desc ", pageNo, pageSize);
     }
 
     @Override
     public Long count(int db_id) {
-        return count(" from from SysBusinessParts where db_id='{db_id}' ");
+        return count("select count(*) from SysBusinessPart where db_id='"+db_id+"' ");
     }
 
 }
