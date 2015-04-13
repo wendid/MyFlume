@@ -31,6 +31,10 @@
                 idField:'id',
                 treeField:'name',
                 columns:[[
+                    {field:'check',title:'Task Name',width:180,
+                        formatter:function(val,row){
+                            return '<input type="checkbox" '+'/>';
+                        } },
                     {field:'id',title:'Task Name',width:180},
                     {field:'nameCn',title:'nameCn',width:60,align:'right'},
                     {field:'nameEn',title:'nameCn',width:80},
@@ -46,6 +50,11 @@
                     $(this).pagination('loading');
                     getDB(pageNumber, pageSize);
                     $(this).pagination('loaded');
+                }
+            });
+
+            $('#partTree').treegrid({
+                onClickRow:function(row){
                 }
             });
         }
