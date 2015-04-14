@@ -1,5 +1,7 @@
 package org.hanzhi.ps.tailor.structure.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -19,6 +21,7 @@ public class SysBusinessDb implements Serializable {
     private String remark;
     private Timestamp cTime;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "sysBusinessDb",cascade = {CascadeType.ALL})
     public Set<SysBusinessPart> getSysBusinessParts() {
         return sysBusinessParts;

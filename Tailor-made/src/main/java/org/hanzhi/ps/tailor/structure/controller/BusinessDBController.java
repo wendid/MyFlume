@@ -79,8 +79,9 @@ public class BusinessDBController extends BaseController<SysBusinessDb> {
 
     @RequestMapping(value = "/dbpart/{db_id}/{pageNo}/{pageSize}",method = RequestMethod.POST)
     public @ResponseBody List<SysBusinessPart> dbPartJson(@PathVariable("pageNo") int pageNo,
-                                                        @PathVariable("pageSize") int pageSize,
-                                                        @PathVariable("db_id") int db_id)
+                                                          @PathVariable("pageSize") int pageSize,
+                                                          @PathVariable("db_id") int db_id)
+
     {
         List<SysBusinessPart> list = businessPartService.findByDBId(db_id, pageNo, pageSize);
 

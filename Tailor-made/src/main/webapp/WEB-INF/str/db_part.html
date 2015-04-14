@@ -33,8 +33,9 @@
                 columns:[[
                     {field:'check',title:'Task Name',width:180,
                         formatter:function(val,row){
-                            return '<input type="checkbox" '+'/>';
-                        } },
+                            return '<input type="checkbox" onclick="show('+row.id+')" />';
+                        }
+                    },
                     {field:'id',title:'Task Name',width:180},
                     {field:'nameCn',title:'nameCn',width:60,align:'right'},
                     {field:'nameEn',title:'nameCn',width:80},
@@ -53,14 +54,13 @@
                 }
             });
 
-            $('#partTree').treegrid({
-                onClickRow:function(row){
-                }
-            });
+//            $('#partTree').treegrid({
+//                onClickRow:function(row){
+//                }
+//            });
         }
-
         $(document).ready(function(){
-            var url="/businessdb/partcount/"+$("#db_id").val();    //相同域名用这个方法
+            var url='/businessdb/partcount/'+$('#db_id').val();    //相同域名用这个方法
 //            var url="/businessdb/count?callback=?";     // 这个方法适用于不同域名的回调函数
                 $.getJSON(url,function(data){
                     $('#pageDiv').pagination({
@@ -119,7 +119,7 @@
 </body>
 </html>
 <script>
-    db_id = $("#db_id").val();
-    $("#add-part-form").attr("action","/businessdb/addpart/"+db_id);
+    db_id = $('#db_id').val();
+    $('#add-part-form').attr('action','/businessdb/addpart/'+db_id);
     getDB(1,10);
 </script>
