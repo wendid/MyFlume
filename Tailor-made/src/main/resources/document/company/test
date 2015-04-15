@@ -1,0 +1,46 @@
+function show(checkid){
+           var s = '#check_'+checkid;
+           //alert( $(s).attr("id"));
+           // alert($(s)[0].checked);
+           /*选子节点*/
+            var nodes = $("#test").treegrid("getChildren",checkid);
+            for(i=0;i<nodes.length;i++){
+               $(('#check_'+nodes[i].id))[0].checked = $(s)[0].checked;
+
+            }
+            //选上级节点
+            if(!$(s)[0].checked){
+              var parent = $("#test").treegrid("getParent",checkid);
+              $(('#check_'+parent.id))[0].checked  = false;
+              while(parent){
+                parent = $("#test").treegrid("getParent",parent.id);
+                 $(('#check_'+parent.id))[0].checked  = false;
+              }
+            }else{
+              var parent = $("#test").treegrid("getParent",checkid);
+              var flag= true;
+              var sons = parent.sondata.split(',');
+              for(j=0;j<sons.length;j++){
+                 if(!$(('#check_'+sons[j]))[0].checked){
+                 flag = false;
+                 break;
+                 }
+              }
+              if(flag)
+              $(('#check_'+parent.id))[0].checked  = true;
+              while(flag){
+                  parent = $("#test").treegrid("getParent",parent.id);
+                 if(parent){
+                 sons = parent.sondata.split(',');
+                 for(j=0;j<sons.length;j++){
+                 if(!$(('#check_'+sons[j]))[0].checked){
+                 flag = false;
+                 break;
+                 }
+                }
+              }
+               if(flag)
+              $(('#check_'+parent.id))[0].checked  = true;
+              }
+            }
+         }

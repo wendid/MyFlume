@@ -10,7 +10,7 @@
     <script type="text/javascript" th:src="@{/resources/easyui_js/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/resources/easyui_js/jquery.easyui.min.js}"></script>
     <script type="text/javascript" th:src="@{/resources/js/var.js}"></script>
-    <script>
+    <script th:inline="javascript">
         var db_id = 0;
         function getDB(pageNumber,pageSize)
         {
@@ -33,7 +33,7 @@
                 columns:[[
                     {field:'check',title:'Task Name',width:180,
                         formatter:function(val,row){
-                            return '<input type="checkbox" onclick="show('+row.id+')" />';
+                            return '<input type="checkbox" onclick="show('+row.id+')" id="check_'+row.id+'" />';
                         }
                     },
                     {field:'id',title:'Task Name',width:180},
@@ -44,6 +44,11 @@
             });
         }
 
+
+        function test()
+        {
+            var a = $("#partTree").treegrid('getChecked');
+        }
         function page()
         {
             $('#pageDiv').pagination({
@@ -54,10 +59,10 @@
                 }
             });
 
-//            $('#partTree').treegrid({
-//                onClickRow:function(row){
-//                }
-//            });
+            $('#partTree').treegrid({
+                onClickRow:function(row){
+                }
+            });
         }
         $(document).ready(function(){
             var url='/businessdb/partcount/'+$('#db_id').val();    //相同域名用这个方法
@@ -76,7 +81,9 @@
 </head>
 <body>
 <h2>Basic Tabs</h2>
-<p>Click tab strip to swap tab panel content.</p>
+<p>Click tab strip to swap tab panel content.
+<input type="button" value="test" onclick="test()" />
+</p>
 <div style="margin:20px 0 10px 0;"></div>
     <div title="增加业务零件" style="padding:10px">
         <input type="hidden" id="db_id" th:value="${sys_db.getId()}"  />
